@@ -1,0 +1,7 @@
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E006] Not Found Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:53:24 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m53 |[0m              .contains(Comapnay([31m1[0m,[31m"rock-the-jvm"[0m,[31m"rock the jvm"[0m,[31m"rockthejvm.com"[0m))[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m                        ^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m                        Not found: Comapnay[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m longer explanation available when compiling with `-explain`[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

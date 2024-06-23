@@ -1,0 +1,13 @@
+{
+  "results": [
+    {
+       "name" : "com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec/Company Controller Test/post company",
+       "status" : "Success",
+       "durationMillis" : "1181",
+       "annotations" : "",
+       "fullyQualifiedClassName" : "com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec",
+       "labels" : ["Company Controller Test", "post company"]
+    }
+
+  ]
+}
