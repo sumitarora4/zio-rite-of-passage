@@ -1,0 +1,31 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(Test/compile, Some(9d60e811-4b77-4e43-b9c0-763e0103e08a), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / compile[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:89:10 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m89 |[0m          response <- basicRequest[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m          ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m          Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:90:10 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m90 |[0m          .get([31muri"/companies"[0m)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m          ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m          Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:91:10 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m91 |[0m          .send(backendStub)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m          ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m          Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:106:10 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m106 |[0m          response <- basicRequest[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m    |[0m          ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m          Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:107:10 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m107 |[0m          .get([31muri"/companies/1"[0m)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m    |[0m          ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m          Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:108:10 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m108 |[0m          .send(backendStub)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m    |[0m          ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m          Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m6 warnings found[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 4 s, completed 7 Jul 2024, 3:11:52 pm[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m

@@ -1,29 +1,19 @@
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/domain/data/Company.scala:18:1 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m18 |[0m [33mobject[0m [35mCompany[0m {[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m Line is indented too far to the right, or a `{` or `:` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/endpoints/HealthEndpoint.scala:10:4 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m10 |[0m    .tag([31m"health"[0m)[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m    ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m    Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/endpoints/HealthEndpoint.scala:11:4 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m11 |[0m    .name([31m"health"[0m)[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m    ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m    Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/endpoints/HealthEndpoint.scala:12:4 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m12 |[0m    .description([31m"health check"[0m)[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m    ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m    Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/endpoints/HealthEndpoint.scala:14:4 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m14 |[0m    .get [34m// http method[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m    ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m    Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/endpoints/HealthEndpoint.scala:15:4 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m15 |[0m    .in([31m"health"[0m) [34m//  path[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m    ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m    Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/endpoints/HealthEndpoint.scala:16:4 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m16 |[0m    .out(plainBody[String]) [34m// output[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m    ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m    Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m7 warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala:28:42 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m28 |[0m  [33moverride[0m [33mdef[0m run = serverProgram.provide([0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                     ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m  [33m──── ZLAYER WARNING ──────────────────────────────────────────────────[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m   [1mYou have provided more than is required.[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m   You may remove the following [1mlayer[0m:[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m     [0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m     [2m1.[0m [36mCompanyService.dummyLayer[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m    [0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m  [33m──────────────────────────────────────────────────────────────────────[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m29 |[0m    Server.default,[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m30 |[0m    CompanyService.dummyLayer[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m31 |[0m    )[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

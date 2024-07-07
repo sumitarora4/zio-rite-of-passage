@@ -8,6 +8,7 @@ import zio.http.Server
 import com.rockthejvm.reviewboard.http.controllers.HealthController
 import com.rockthejvm.reviewboard.http.controllers.CompanyController
 import com.rockthejvm.reviewboard.http.HttpApi
+import com.rockthejvm.reviewboard.services.CompanyService
 
 object Application extends ZIOAppDefault {
 
@@ -24,5 +25,8 @@ object Application extends ZIOAppDefault {
 
       _ <- Console.printLine("Rock the jvm...")
     } yield ()
-  override def run = serverProgram.provide(Server.default)
+  override def run = serverProgram.provide(
+    Server.default,
+    CompanyService.dummyLayer
+    )
 }

@@ -1,0 +1,106 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(Test/compile, Some(e3d311dc-6c6e-4f7d-8d82-bcfab5427faf), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / compile[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:68:10 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m68 |[0m          response <- basicRequest[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m          ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m          Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:69:10 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m69 |[0m          .get([31muri"/companies"[0m)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m          ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m          Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:70:10 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m70 |[0m          .send(backendStub)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m          ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m          Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:85:10 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m85 |[0m          response <- basicRequest[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m          ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m          Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:86:10 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m86 |[0m          .get([31muri"/companies/1"[0m)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m          ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m          Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:87:10 [0m[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m87 |[0m          .send(backendStub)[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m          ^[0m[0m
+[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m          Line is indented too far to the left, or a `}` is missing[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:38:4 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m38 |[0m    suite([31m"Company Controller Test"[0m)([0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m   |[0m    ^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  [31m──── ZIO SPEC ERROR ──────────────────────────────────────────────────[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m   [1mYour suite requires a service that is not in the environment.[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m   [0mPlease provide a layer for the following type:[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m     [2m1.[0m [1m[35mcom.rockthejvm.reviewboard.services.CompanyService[0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m   Call your suite's [1m[32mprovide[0m[0m method with the layers you need.[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m   You can read more about layers and providing services here:[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m   [0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m     https://zio.dev/reference/contextual/[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m  [31m──────────────────────────────────────────────────────────────────────[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m   |[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m39 |[0m      [34m// test("simple test") {[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m40 |[0m      [34m//   // code under test sdf[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m41 |[0m      [34m//   assertZIO(ZIO.succeed(1 + 1))([0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m42 |[0m      [34m//     Assertion.assertion("basic math")(_ == 2)[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m43 |[0m      [34m//   )[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m44 |[0m      [34m// },[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m45 |[0m      test([31m"post company"[0m) {[0m
+[0m[[0m[31merror[0m] [0m[0m[31m46 |[0m        [33mval[0m [36mprogram[0m = [33mfor[0m {[0m
+[0m[[0m[31merror[0m] [0m[0m[31m47 |[0m         backendStub <- backEndStubZIO(_.create)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m48 |[0m          [34m// run http request[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m49 |[0m          response <- basicRequest[0m
+[0m[[0m[31merror[0m] [0m[0m[31m50 |[0m            .post([31muri"/companies"[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m51 |[0m            .body(CreateCompanyRequest([31m1[0m,[31m"rock_the_jvm"[0m,[31m"Rock the Jvm"[0m,[31m"rockthejvm.com"[0m).toJson)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m52 |[0m            .send(backendStub)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m53 |[0m        } [33myield[0m response.body[0m
+[0m[[0m[31merror[0m] [0m[0m[31m54 |[0m          [34m// inspect http response[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m55 |[0m          program.assert { [0m
+[0m[[0m[31merror[0m] [0m[0m[31m56 |[0m              [36mrespBody[0m => respBody.toOption[0m
+[0m[[0m[31merror[0m] [0m[0m[31m57 |[0m              .flatMap(_.fromJson[[35mCompany[0m].toOption)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m58 |[0m              .contains(Company([31m1[0m,[31m"rock_the_jvm"[0m,[31m"Rock the Jvm"[0m,[31m"rockthejvm.com"[0m))[0m
+[0m[[0m[31merror[0m] [0m[0m[31m59 |[0m            }[0m
+[0m[[0m[31merror[0m] [0m[0m[31m60 |[0m      },[0m
+[0m[[0m[31merror[0m] [0m[0m[31m61 |[0m      test([31m"get All"[0m){[0m
+[0m[[0m[31merror[0m] [0m[0m[31m62 |[0m        [33mval[0m [36mprogram[0m = [33mfor[0m{[0m
+[0m[[0m[31merror[0m] [0m[0m[31m63 |[0m           backendStub <- backEndStubZIO(_.getAll)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m64 |[0m          [34m// run http request[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m65 |[0m          response <- basicRequest[0m
+[0m[[0m[31merror[0m] [0m[0m[31m66 |[0m          .get([31muri"/companies"[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m67 |[0m          .send(backendStub)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m68 |[0m        } [33myield[0m response.body[0m
+[0m[[0m[31merror[0m] [0m[0m[31m69 |[0m        [34m// inspect http response  [0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m70 |[0m          program.assert { [0m
+[0m[[0m[31merror[0m] [0m[0m[31m71 |[0m              [36mrespBody[0m => respBody.toOption[0m
+[0m[[0m[31merror[0m] [0m[0m[31m72 |[0m              .flatMap(_.fromJson[[35mList[0m[[35mCompany[0m]].toOption)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m73 |[0m              .contains(List())[0m
+[0m[[0m[31merror[0m] [0m[0m[31m74 |[0m            }[0m
+[0m[[0m[31merror[0m] [0m[0m[31m75 |[0m      },[0m
+[0m[[0m[31merror[0m] [0m[0m[31m76 |[0m      test([31m"get by id"[0m){[0m
+[0m[[0m[31merror[0m] [0m[0m[31m77 |[0m        [33mval[0m [36mprogram[0m = [33mfor[0m{[0m
+[0m[[0m[31merror[0m] [0m[0m[31m78 |[0m            backendStub <- backEndStubZIO(_.getById)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m79 |[0m          [34m// run http request[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m80 |[0m          response <- basicRequest[0m
+[0m[[0m[31merror[0m] [0m[0m[31m81 |[0m          .get([31muri"/companies/1"[0m)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m82 |[0m          .send(backendStub)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m83 |[0m        } [33myield[0m response.body[0m
+[0m[[0m[31merror[0m] [0m[0m[31m84 |[0m        [34m// inspect http response[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m85 |[0m          program.assert { [0m
+[0m[[0m[31merror[0m] [0m[0m[31m86 |[0m              [36mrespBody[0m => respBody.toOption[0m
+[0m[[0m[31merror[0m] [0m[0m[31m87 |[0m              .flatMap(_.fromJson[[35mCompany[0m].toOption)[0m
+[0m[[0m[31merror[0m] [0m[0m[31m88 |[0m              .isEmpty[0m
+[0m[[0m[31merror[0m] [0m[0m[31m89 |[0m            }[0m
+[0m[[0m[31merror[0m] [0m[0m[31m90 |[0m      }[0m
+[0m[[0m[31merror[0m] [0m[0m[31m91 |[0m    )[0m
+[0m[[0m[33mwarn[0m] [0m[0m6 warnings found[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 15 s, completed 7 Jul 2024, 3:03:33 pm[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
