@@ -30,3 +30,4 @@
 [0m[[0m[0minfo[0m] [0m[0mCompleted tests[0m
 [0m[[0m[32msuccess[0m] [0m[0mTotal time: 8 s, completed 7 Jul 2024, 3:15:46 pm[0m
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mForcing garbage collection...[0m
