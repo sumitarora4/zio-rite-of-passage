@@ -1,4 +1,4 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec, zio.test.sbt.ZioSpecFingerprint$@c6133d8, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec, zio.test.sbt.ZioSpecFingerprint$@59f9fecc, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0mCompleted tests[0m
 [0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
 [0m[[0m[0mdebug[0m] [0m[0m	com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec[0m

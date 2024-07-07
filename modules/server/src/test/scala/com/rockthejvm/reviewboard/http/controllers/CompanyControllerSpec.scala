@@ -8,16 +8,32 @@ import sttp.client3.testing.SttpBackendStub
 import sttp.monad.MonadError
 import sttp.tapir.ztapir.RIOMonadError
 
-import com.rockthejvm.reviewboard.http.requests.CreateCompanyRequest
-import com.rockthejvm.reviewboard.domain.data.Company
 
 import zio.json.*
 import sttp.tapir.generic.auto.*
 import sttp.client3.*
+import sttp.tapir.server.ServerEndpoint
+
+import com.rockthejvm.reviewboard.http.requests.CreateCompanyRequest
+import com.rockthejvm.reviewboard.domain.data.Company
+import com.rockthejvm.reviewboard.syntax.*
+
+
 
 object CompanyControllerSpec extends ZIOSpecDefault {
 
   private given zioMe: MonadError[Task] = new RIOMonadError[Any]
+
+  private def backEndStubZIO(endpointFun: CompanyController => ServerEndpoint[Any, Task]) = for {
+    // create the controller
+          controller <- CompanyController.makeZIO
+
+          // build tapir backend
+          backendStub <- ZIO.succeed(TapirStubInterpreter(SttpBackendStub(MonadError[Task]))
+            .whenServerEndpointRunLogic(endpointFun(controller))
+            .backend()
+          )
+  } yield backendStub
   override def spec: Spec[TestEnvironment & Scope, Any] = {
     suite("Company Controller Test")(
       // test("simple test") {
@@ -29,14 +45,7 @@ object CompanyControllerSpec extends ZIOSpecDefault {
       test("post company") {
         val program = for {
 
-          // create the controller
-          controller <- CompanyController.makeZIO
-
-          // build tapir backend
-          backendStub <- ZIO.succeed(TapirStubInterpreter(SttpBackendStub(MonadError[Task]))
-            .whenServerEndpointRunLogic(controller.create)
-            .backend()
-          )
+         backendStub <- backEndStubZIO(_.create)
 
           // run http request
           response <- basicRequest
@@ -46,18 +55,45 @@ object CompanyControllerSpec extends ZIOSpecDefault {
         } yield response.body
 
           // inspect http response
-          assertZIO(program)(
-            Assertion.assertion("inspect the http request from getAll"){ 
+          program.assert { 
               respBody => respBody.toOption
               .flatMap(_.fromJson[Company].toOption)
               .contains(Company(1,"rock_the_jvm","Rock the Jvm","rockthejvm.com"))
             }
-          )
+      },
+      test("get All"){
+        val program = for{
+           backendStub <- backEndStubZIO(_.getAll)
+          // run http request
+          response <- basicRequest
+          .get(uri"/companies")
+          .send(backendStub)
+        } yield response.body
 
+        // inspect http response  
+          program.assert { 
+              respBody => respBody.toOption
+              .flatMap(_.fromJson[List[Company]].toOption)
+              .contains(List())
+            }
+      },
+      test("get by id"){
+        val program = for{
+            backendStub <- backEndStubZIO(_.getById)
 
+          // run http request
+          response <- basicRequest
+          .get(uri"/companies/1")
+          .send(backendStub)
+        } yield response.body
+
+        // inspect http response
+          program.assert { 
+              respBody => respBody.toOption
+              .flatMap(_.fromJson[Company].toOption)
+              .isEmpty
+            }
       }
-
-
     )
   }
 }

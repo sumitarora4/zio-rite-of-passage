@@ -1,0 +1,8 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(test, Some(8fd6d9c0-cccc-4e1f-944f-bcea2c2987e6), Some(CommandSource(console0)))[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / test[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mCompleted tests[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 22 s, completed 23 Jun 2024, 4:39:57 pm[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(shell, None, None)[0m
