@@ -1,28 +1,28 @@
 {
   "results": [
     {
-       "name" : "com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec/Company Controller Test/get by id",
+       "name" : "test_case_741945637/Company Controller Test/get by id",
        "status" : "Success",
-       "durationMillis" : "997",
+       "durationMillis" : "1560",
        "annotations" : "",
-       "fullyQualifiedClassName" : "com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec",
+       "fullyQualifiedClassName" : "test_case_741945637",
        "labels" : ["Company Controller Test", "get by id"]
     },
     {
-       "name" : "com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec/Company Controller Test/post company",
+       "name" : "test_case_741945637/Company Controller Test/get All",
        "status" : "Success",
-       "durationMillis" : "998",
+       "durationMillis" : "1542",
        "annotations" : "",
-       "fullyQualifiedClassName" : "com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec",
-       "labels" : ["Company Controller Test", "post company"]
+       "fullyQualifiedClassName" : "test_case_741945637",
+       "labels" : ["Company Controller Test", "get All"]
     },
     {
-       "name" : "com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec/Company Controller Test/get All",
+       "name" : "test_case_741945637/Company Controller Test/post company",
        "status" : "Success",
-       "durationMillis" : "1000",
+       "durationMillis" : "1570",
        "annotations" : "",
-       "fullyQualifiedClassName" : "com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec",
-       "labels" : ["Company Controller Test", "get All"]
+       "fullyQualifiedClassName" : "test_case_741945637",
+       "labels" : ["Company Controller Test", "post company"]
     }
 
   ]
