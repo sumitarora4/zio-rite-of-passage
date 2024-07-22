@@ -1,1 +1,1 @@
-["com.rockthejvm.reviewboard.Application"]
+["com.rockthejvm.reviewboard.Application","com.rockthejvm.reviewboard.http.repositories.CompanyRepositoryDemo"]

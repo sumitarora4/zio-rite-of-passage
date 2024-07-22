@@ -1,19 +1,46 @@
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala:28:42 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m28 |[0m  [33moverride[0m [33mdef[0m run = serverProgram.provide([0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                     ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m  [33m──── ZLAYER WARNING ──────────────────────────────────────────────────[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m   [1mYou have provided more than is required.[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m   You may remove the following [1mlayer[0m:[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m     [0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m     [2m1.[0m [36mCompanyService.dummyLayer[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m    [0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m  [33m──────────────────────────────────────────────────────────────────────[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m29 |[0m    Server.default,[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m30 |[0m    CompanyService.dummyLayer[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m31 |[0m    )[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m[34m-- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala:28:12 [0m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m28 |[0m        run {[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m[34m   |[0m        ^[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m   |[0mQuill Query (compiled in 376ms): INSERT INTO companies (slug,name,url,country,location,industry,image,tag) VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING id, slug, name, url, country, location, industry, image, tag[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m29 |[0m            query[[35mCompany[0m][0m
+[0m[[0m[0minfo[0m] [0m[0m[34m30 |[0m            .insertValue(lift(company))[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m31 |[0m            .returning([36mr[0m => r)[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m32 |[0m        }[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m[34m-- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala:36:27 [0m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m36 |[0m            updated <- run {[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m[34m   |[0m                       ^[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m   |[0mQuill Query (compiled in 80ms): UPDATE companies AS x3 SET slug = ?, name = ?, url = ?, country = ?, location = ?, industry = ?, image = ?, tag = ? WHERE x3.id = ? RETURNING id, slug, name, url, country, location, industry, image, tag[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m37 |[0m                query[Company][0m
+[0m[[0m[0minfo[0m] [0m[0m[34m38 |[0m                .filter(_.id == lift(id))[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m39 |[0m                .updateValue(lift(op(current)))[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m40 |[0m                .returning(r => r)[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m41 |[0m            }[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m[34m-- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala:45:12 [0m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m45 |[0m        run {[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m[34m   |[0m        ^[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m   |[0mQuill Query (compiled in 42ms): DELETE FROM companies AS x4 WHERE x4.id = ? RETURNING id, slug, name, url, country, location, industry, image, tag[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m46 |[0m            query[[35mCompany[0m][0m
+[0m[[0m[0minfo[0m] [0m[0m[34m47 |[0m            .filter(_.id == lift(id))[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m48 |[0m            .delete[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m49 |[0m            .returning([36mr[0m => r)[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m50 |[0m        }[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m[34m-- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala:52:12 [0m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m52 |[0m         run{[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m[34m   |[0m         ^[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m   |[0mQuill Query (compiled in 267ms): SELECT x5.id, x5.slug, x5.name, x5.url, x5.country, x5.location, x5.industry, x5.image, x5.tag FROM companies x5 WHERE x5.id = ?[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m53 |[0m            query[[35mCompany[0m][0m
+[0m[[0m[0minfo[0m] [0m[0m[34m54 |[0m            .filter(_.id == lift(id))[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m55 |[0m        }.map(_.headOption)[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m[34m-- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala:58:12 [0m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m58 |[0m        run {[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m[34m   |[0m        ^[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m   |[0mQuill Query (compiled in 14ms): SELECT x7.id, x7.slug, x7.name, x7.url, x7.country, x7.location, x7.industry, x7.image, x7.tag FROM companies x7 WHERE x7.slug = ?[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m59 |[0m            query[[35mCompany[0m][0m
+[0m[[0m[0minfo[0m] [0m[0m[34m60 |[0m            .filter(_.slug == lift(slug))[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m61 |[0m        }.map(_.headOption)[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m[34m-- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala:63:12 [0m[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m63 |[0m        run {[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m[34m   |[0m        ^[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m   |[0mQuill Query (compiled in 6ms): SELECT x.id, x.slug, x.name, x.url, x.country, x.location, x.industry, x.image, x.tag FROM companies x[0m
+[0m[[0m[0minfo[0m] [0m[0m[34m64 |[0m            query[[35mCompany[0m][0m
+[0m[[0m[0minfo[0m] [0m[0m[34m65 |[0m        }[0m

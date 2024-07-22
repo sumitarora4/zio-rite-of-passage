@@ -10,4 +10,4 @@
         - "POSTGRES_USER=docker"
         - "POSTGRES_PASSWORD=docker"
       ports:
-        - "5437:5437"
+        - "5437:5432"

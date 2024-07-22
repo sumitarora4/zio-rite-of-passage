@@ -2225,3 +2225,248 @@ WARNING: Unmatched cancel notification for request id 1
 2024.07.14 11:29:48 INFO  time: compiled server-test in 4.05s
 Jul 14, 2024 11:29:49 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+Jul 14, 2024 11:37:47 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 84
+2024.07.14 11:40:41 INFO  compiling server (1 scala source)
+2024.07.14 11:40:47 INFO  time: compiled server in 6.49s
+2024.07.14 11:42:49 INFO  compiling server (1 scala source)
+2024.07.14 11:43:00 INFO  time: compiled server in 10s
+2024.07.14 11:47:09 INFO  compiling server (1 scala source)
+2024.07.14 11:47:17 INFO  time: compiled server in 7.5s
+Jul 14, 2024 11:48:43 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 904
+2024.07.14 11:49:38 INFO  compiling server (1 scala source)
+2024.07.14 11:49:47 INFO  Deduplicating compilation of server from bsp client 'Metals 1.3.3' (since 22m 17.539s)
+2024.07.14 11:49:47 INFO  compiling server (1 scala source)
+2024.07.14 11:49:49 INFO  time: compiled server in 1.82s
+2024.07.14 11:51:16 INFO  compiling server (1 scala source)
+2024.07.14 11:51:28 INFO  time: compiled server in 12s
+Jul 14, 2024 11:54:59 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1416
+Jul 14, 2024 11:58:36 AM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2107
+2024.07.14 11:58:39 INFO  compiling server (1 scala source)
+2024.07.14 11:58:43 INFO  time: compiled server in 3.48s
+2024.07.14 11:58:43 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:09 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:09 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:12 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:15 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:18 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:22 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:28 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:30 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:30 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:31 INFO  compiling server (1 scala source)
+2024.07.14 11:59:34 INFO  time: compiled server in 2.9s
+2024.07.14 11:59:35 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:38 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:40 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:40 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:41 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:43 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 11:59:44 INFO  compiling server (1 scala source)
+2024.07.14 11:59:51 INFO  time: compiled server in 7.68s
+2024.07.14 12:00:21 INFO  time: code lens generation in 1.03s
+2024.07.14 12:01:51 INFO  compiling server (1 scala source)
+2024.07.14 12:01:53 INFO  time: compiled server in 2.06s
+2024.07.14 12:02:40 INFO  compiling server (1 scala source)
+2024.07.14 12:02:48 INFO  time: compiled server in 8s
+2024.07.14 12:02:48 INFO  compiling server (1 scala source)
+2024.07.14 12:02:55 INFO  time: compiled server in 7.18s
+Jul 14, 2024 12:03:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2774
+2024.07.14 12:03:54 INFO  compiling server (1 scala source)
+2024.07.14 12:04:03 INFO  time: compiled server in 8.13s
+Jul 14, 2024 12:20:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2867
+Jul 14, 2024 12:20:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2868
+Jul 14, 2024 12:21:25 PM scala.meta.internal.pc.CompilerAccess handleError
+SEVERE: A severe compiler error occurred, full details of the error can be found in the error report /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/.reports/metals-full/2024-07-14/r_compiler-error_(server)_12-21-25-604.md
+Jul 14, 2024 12:21:52 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3180
+Jul 14, 2024 12:26:07 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3470
+Jul 14, 2024 12:26:38 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3631
+Jul 14, 2024 12:27:32 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3919
+Jul 14, 2024 12:28:36 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4170
+2024.07.14 12:29:44 INFO  compiling server (1 scala source)
+2024.07.14 12:29:46 INFO  time: compiled server in 2.03s
+2024.07.14 12:29:52 WARN  Using indexes to guess the definition of Quill
+2024.07.14 12:29:55 INFO  compiling server (1 scala source)
+2024.07.14 12:29:57 INFO  time: compiled server in 1.88s
+2024.07.14 12:30:00 INFO  compiling server (1 scala source)
+2024.07.14 12:30:03 INFO  time: compiled server in 2.84s
+2024.07.14 12:30:03 INFO  compiling server (1 scala source)
+2024.07.14 12:30:06 INFO  time: compiled server in 3.01s
+2024.07.14 12:30:13 INFO  compiling server (1 scala source)
+2024.07.14 12:30:22 INFO  time: compiled server in 9.1s
+Jul 14, 2024 12:37:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jul 14, 2024 12:58:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4654
+2024.07.14 12:58:49 INFO  compiling server (1 scala source)
+2024.07.14 12:58:55 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala
+2024.07.14 12:59:02 INFO  time: compiled server in 12s
+Jul 14, 2024 6:28:39 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4791
+2024.07.14 18:41:22 INFO  compiling server (1 scala source)
+2024.07.14 18:41:32 INFO  time: compiled server in 9.55s
+Jul 14, 2024 6:45:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 5081
+2024.07.14 18:58:40 INFO  Shutting down server
+2024.07.14 18:58:40 INFO  shutting down Metals
+2024.07.14 18:58:40 INFO  Shut down connection with build server.
+2024.07.14 18:58:40 INFO  Shut down connection with build server.
+2024.07.14 18:58:40 INFO  Shut down connection with build server.
+2024.07.14 18:58:40 INFO  Exiting server
+2024.07.20 19:56:41 INFO  Started: Metals version 1.3.3 in folders '/Users/sumitarora/Desktop/zio-rite-of-passage' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@55b718ac]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@1d2e4466]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@55b718ac]
+2024.07.20 19:56:42 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.20 19:56:45 INFO  no build target found for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/http/repositories/CompanyRepository.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.20 19:56:45 INFO  Attempting to connect to the build server...
+Jul 20, 2024 7:56:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 9
+Jul 20, 2024 7:56:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 11
+Jul 20, 2024 7:56:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 17
+Jul 20, 2024 7:56:56 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 12
+Jul 20, 2024 7:56:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 24
+Jul 20, 2024 7:56:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 22
+Jul 20, 2024 7:56:57 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 19
+Jul 20, 2024 7:56:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 25
+Jul 20, 2024 7:56:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 31
+Jul 20, 2024 7:56:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 26
+Jul 20, 2024 7:56:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 32
+Jul 20, 2024 7:56:59 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 38
+2024.07.20 19:56:59 INFO  no build target found for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/syntax/AssertionSyntax.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.07.20 19:57:05 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.20 19:57:05 INFO  Attempting to connect to the build server...
+2024.07.20 19:57:05 INFO  Attempting to connect to the build server...
+2024.07.20 19:57:06 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/project/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.20 19:57:06 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/project/project/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.20 19:57:06 INFO  time: Connected to build server in 20s
+2024.07.20 19:57:06 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.20 19:57:07 INFO  time: Imported build in 0.95s
+2024.07.20 19:57:08 INFO  running doctor check
+2024.07.20 19:57:08 INFO  java targets: server-test, root, root-test, foundations, server, zio-rite-of-passage-build-build, foundations-test, zio-rite-of-passage-build
+2024.07.20 19:57:14 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.20 19:57:18 INFO  time: indexed workspace in 10s
+2024.07.20 19:57:20 INFO  compiling foundations (2 scala sources)
+2024.07.20 19:57:20 INFO  compiling server (12 scala sources)
+Jul 20, 2024 7:57:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jul 20, 2024 7:57:42 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.07.20 19:57:51 INFO  time: compiled foundations in 31s
+2024.07.20 19:58:11 INFO  time: compiled server in 51s
+2024.07.20 19:58:11 INFO  compiling server-test (1 scala source)
+2024.07.20 19:58:16 INFO  time: compiled server-test in 4.48s
+Jul 20, 2024 8:01:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jul 20, 2024 8:03:07 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.07.20 20:28:21 INFO  Shutting down server
+2024.07.20 20:28:21 INFO  shutting down Metals
+2024.07.20 20:28:22 INFO  Shut down connection with build server.
+2024.07.20 20:28:22 INFO  Shut down connection with build server.
+2024.07.20 20:28:22 INFO  Shut down connection with build server.
+2024.07.20 20:28:21 INFO  Exiting server
+2024.07.20 20:28:49 INFO  Started: Metals version 1.3.3 in folders '/Users/sumitarora/Desktop/zio-rite-of-passage' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@1d277deb]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@3edc077]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@1d277deb]
+2024.07.20 20:28:50 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.20 20:28:51 INFO  Attempting to connect to the build server...
+2024.07.20 20:28:52 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.20 20:28:52 INFO  Attempting to connect to the build server...
+2024.07.20 20:28:52 INFO  Attempting to connect to the build server...
+2024.07.20 20:28:53 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/project/project/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.20 20:28:53 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/project/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.20 20:28:53 INFO  time: Connected to build server in 1.84s
+2024.07.20 20:28:53 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.20 20:28:54 INFO  time: Imported build in 0.99s
+2024.07.20 20:28:55 INFO  running doctor check
+2024.07.20 20:28:55 INFO  java targets: server-test, root, root-test, foundations, server, zio-rite-of-passage-build-build, foundations-test, zio-rite-of-passage-build
+2024.07.20 20:29:04 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.20 20:29:07 INFO  time: indexed workspace in 13s
+Jul 20, 2024 8:38:40 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+Jul 20, 2024 8:38:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3
+2024.07.20 22:39:43 INFO  Shutting down server
+2024.07.20 22:39:43 INFO  shutting down Metals
+2024.07.20 22:39:43 INFO  Shut down connection with build server.
+2024.07.20 22:39:43 INFO  Shut down connection with build server.
+2024.07.20 22:39:43 INFO  Shut down connection with build server.
+2024.07.20 22:39:43 INFO  Exiting server
+2024.07.21 16:47:33 INFO  Started: Metals version 1.3.3 in folders '/Users/sumitarora/Desktop/zio-rite-of-passage' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@1d2e4466]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@7de7a8e]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@1d2e4466]
+2024.07.21 16:47:34 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.21 16:47:36 INFO  Attempting to connect to the build server...
+2024.07.21 16:47:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.21 16:47:49 INFO  Attempting to connect to the build server...
+2024.07.21 16:47:49 INFO  Attempting to connect to the build server...
+2024.07.21 16:47:50 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/project/project/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.21 16:47:49 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/project/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.21 16:47:50 INFO  time: Connected to build server in 13s
+2024.07.21 16:47:50 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.21 16:47:52 INFO  time: Imported build in 2.15s
+2024.07.21 16:47:53 INFO  running doctor check
+2024.07.21 16:47:53 INFO  java targets: server-test, root, root-test, foundations, server, zio-rite-of-passage-build-build, foundations-test, zio-rite-of-passage-build
+2024.07.21 16:48:04 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.21 16:48:08 INFO  time: indexed workspace in 15s
+Jul 21, 2024 4:59:15 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.07.21 17:39:56 INFO  Shutting down server
+2024.07.21 17:39:56 INFO  shutting down Metals
+2024.07.21 17:39:57 INFO  Shut down connection with build server.
+2024.07.21 17:39:57 INFO  Shut down connection with build server.
+2024.07.21 17:39:57 INFO  Shut down connection with build server.
+2024.07.21 17:39:56 INFO  Exiting server
+2024.07.22 19:35:36 INFO  Started: Metals version 1.3.3 in folders '/Users/sumitarora/Desktop/zio-rite-of-passage' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@1cc86607]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@6836651a]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@1cc86607]
+2024.07.22 19:35:39 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.22 19:35:42 INFO  Attempting to connect to the build server...
+2024.07.22 19:35:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.22 19:35:57 INFO  Attempting to connect to the build server...
+2024.07.22 19:35:57 INFO  Attempting to connect to the build server...
+2024.07.22 19:35:58 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/project/project/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.22 19:35:57 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/project/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.22 19:35:58 INFO  time: Connected to build server in 16s
+2024.07.22 19:35:58 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.22 19:36:00 INFO  time: Imported build in 1.11s
+2024.07.22 19:36:00 INFO  running doctor check
+2024.07.22 19:36:00 INFO  java targets: server-test, root, root-test, foundations, server, zio-rite-of-passage-build-build, foundations-test, zio-rite-of-passage-build
+2024.07.22 19:36:15 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.22 19:36:19 INFO  time: indexed workspace in 19s
+Jul 22, 2024 7:36:57 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
