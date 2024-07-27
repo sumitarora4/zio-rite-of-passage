@@ -1,28 +1,28 @@
 {
   "results": [
     {
-       "name" : "test_case_741945637/Company Controller Test/get by id",
+       "name" : "test_case_-621538246/Company Controller Test/post company",
        "status" : "Success",
-       "durationMillis" : "1560",
+       "durationMillis" : "1106",
        "annotations" : "",
-       "fullyQualifiedClassName" : "test_case_741945637",
-       "labels" : ["Company Controller Test", "get by id"]
+       "fullyQualifiedClassName" : "test_case_-621538246",
+       "labels" : ["Company Controller Test", "post company"]
     },
     {
-       "name" : "test_case_741945637/Company Controller Test/get All",
+       "name" : "test_case_-621538246/Company Controller Test/get All",
        "status" : "Success",
-       "durationMillis" : "1542",
+       "durationMillis" : "1141",
        "annotations" : "",
-       "fullyQualifiedClassName" : "test_case_741945637",
+       "fullyQualifiedClassName" : "test_case_-621538246",
        "labels" : ["Company Controller Test", "get All"]
     },
     {
-       "name" : "test_case_741945637/Company Controller Test/post company",
+       "name" : "test_case_-621538246/Company Controller Test/get by id",
        "status" : "Success",
-       "durationMillis" : "1570",
+       "durationMillis" : "1165",
        "annotations" : "",
-       "fullyQualifiedClassName" : "test_case_741945637",
-       "labels" : ["Company Controller Test", "post company"]
+       "fullyQualifiedClassName" : "test_case_-621538246",
+       "labels" : ["Company Controller Test", "get by id"]
     }
 
   ]

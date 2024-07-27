@@ -2470,3 +2470,316 @@ SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@1cc8660
 2024.07.22 19:36:19 INFO  time: indexed workspace in 19s
 Jul 22, 2024 7:36:57 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
+2024.07.22 19:39:18 INFO  Shutting down server
+2024.07.22 19:39:18 INFO  shutting down Metals
+2024.07.22 19:39:18 INFO  Shut down connection with build server.
+2024.07.22 19:39:18 INFO  Shut down connection with build server.
+2024.07.22 19:39:18 INFO  Shut down connection with build server.
+2024.07.22 19:39:18 INFO  Exiting server
+2024.07.22 19:41:38 INFO  Started: Metals version 1.3.3 in folders '/Users/sumitarora/Desktop/zio-rite-of-passage' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@55cea59a]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@566f61e9]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@55cea59a]
+2024.07.22 19:41:39 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.22 19:41:40 INFO  Attempting to connect to the build server...
+2024.07.22 19:41:41 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.22 19:41:41 INFO  Attempting to connect to the build server...
+2024.07.22 19:41:41 INFO  Attempting to connect to the build server...
+2024.07.22 19:41:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/project/project/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.22 19:41:42 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/project/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.22 19:41:42 INFO  time: Connected to build server in 1.81s
+2024.07.22 19:41:42 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.22 19:41:42 INFO  time: Imported build in 0.49s
+2024.07.22 19:41:43 INFO  running doctor check
+2024.07.22 19:41:43 INFO  java targets: server-test, root, root-test, foundations, server, zio-rite-of-passage-build-build, foundations-test, zio-rite-of-passage-build
+2024.07.22 19:41:51 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.22 19:41:55 INFO  time: indexed workspace in 12s
+Jul 22, 2024 7:41:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jul 22, 2024 7:44:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jul 22, 2024 7:52:55 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jul 22, 2024 7:53:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jul 22, 2024 7:53:01 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jul 22, 2024 7:53:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.07.22 20:25:44 INFO  Shutting down server
+2024.07.22 20:25:44 INFO  shutting down Metals
+2024.07.22 20:25:44 INFO  Shut down connection with build server.
+2024.07.22 20:25:44 INFO  Shut down connection with build server.
+2024.07.22 20:25:44 INFO  Shut down connection with build server.
+2024.07.22 20:25:44 INFO  Exiting server
+2024.07.27 12:25:25 INFO  Started: Metals version 1.3.3 in folders '/Users/sumitarora/Desktop/zio-rite-of-passage' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@57061336]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@4066e009]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@57061336]
+2024.07.27 12:25:26 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.27 12:25:27 INFO  Attempting to connect to the build server...
+2024.07.27 12:25:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.27 12:25:38 INFO  Attempting to connect to the build server...
+2024.07.27 12:25:38 INFO  Attempting to connect to the build server...
+2024.07.27 12:25:38 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/project/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.27 12:25:39 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/project/project/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.27 12:25:39 INFO  time: Connected to build server in 11s
+2024.07.27 12:25:39 INFO  Connected to Build server: Bloop v1.6.0
+2024.07.27 12:25:40 INFO  time: Imported build in 0.93s
+2024.07.27 12:25:41 INFO  running doctor check
+2024.07.27 12:25:41 INFO  java targets: server-test, root, root-test, foundations, server, zio-rite-of-passage-build-build, foundations-test, zio-rite-of-passage-build
+2024.07.27 12:25:54 WARN  Flyway upgrade recommended: H2 2.2.224 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.27 12:25:58 INFO  time: indexed workspace in 17s
+Jul 27, 2024 12:29:31 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 45
+Jul 27, 2024 12:30:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 195
+2024.07.27 12:30:32 INFO  compiling server (1 scala source)
+2024.07.27 12:30:38 INFO  time: compiled server in 6.45s
+Jul 27, 2024 12:33:41 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 373
+Jul 27, 2024 12:34:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 473
+2024.07.27 12:35:22 INFO  compiling server (1 scala source)
+2024.07.27 12:35:29 INFO  time: compiled server in 6.62s
+2024.07.27 12:40:58 INFO  compiling server (1 scala source)
+2024.07.27 12:40:59 INFO  time: compiled server in 1.07s
+2024.07.27 12:41:13 INFO  compiling server (1 scala source)
+2024.07.27 12:41:19 INFO  time: compiled server in 6.15s
+2024.07.27 12:41:40 INFO  compiling server (1 scala source)
+2024.07.27 12:41:44 INFO  time: compiled server in 4.06s
+2024.07.27 12:41:44 INFO  compiling server (1 scala source)
+2024.07.27 12:41:47 INFO  time: compiled server in 3.21s
+2024.07.27 12:41:47 INFO  compiling server (1 scala source)
+2024.07.27 12:41:50 INFO  time: compiled server in 2.83s
+Jul 27, 2024 12:42:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jul 27, 2024 12:43:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.07.27 12:51:16 INFO  compiling server (1 scala source)
+Jul 27, 2024 12:51:17 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1730
+2024.07.27 12:51:18 INFO  time: compiled server in 2.6s
+Jul 27, 2024 12:53:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1806
+Jul 27, 2024 12:53:26 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1883
+2024.07.27 13:00:30 INFO  compiling server (3 scala sources)
+2024.07.27 13:00:34 INFO  time: compiled server in 4.12s
+2024.07.27 13:00:34 INFO  compiling server (3 scala sources)
+2024.07.27 13:00:37 INFO  time: compiled server in 3.04s
+2024.07.27 13:00:44 INFO  compiling server (3 scala sources)
+2024.07.27 13:00:47 INFO  time: compiled server in 2.87s
+2024.07.27 13:01:31 INFO  compiling server (3 scala sources)
+2024.07.27 13:01:35 INFO  time: compiled server in 3.74s
+Jul 27, 2024 1:02:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+2024.07.27 13:02:19 INFO  compiling server (3 scala sources)
+2024.07.27 13:02:22 INFO  time: compiled server in 3.73s
+2024.07.27 13:02:22 INFO  compiling server (3 scala sources)
+2024.07.27 13:02:27 INFO  time: compiled server in 4.22s
+2024.07.27 13:02:45 INFO  compiling server (3 scala sources)
+2024.07.27 13:02:47 INFO  time: compiled server in 2.6s
+Jul 27, 2024 1:04:11 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2226
+2024.07.27 13:04:26 INFO  compiling server (3 scala sources)
+2024.07.27 13:04:29 INFO  time: compiled server in 2.99s
+2024.07.27 13:05:15 INFO  compiling server (3 scala sources)
+2024.07.27 13:05:18 INFO  time: compiled server in 2.32s
+Jul 27, 2024 1:05:55 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2329
+2024.07.27 13:06:04 INFO  compiling server (3 scala sources)
+2024.07.27 13:06:07 INFO  time: compiled server in 2.82s
+2024.07.27 13:06:07 INFO  compiling server (3 scala sources)
+2024.07.27 13:06:10 INFO  time: compiled server in 2.83s
+2024.07.27 13:06:10 INFO  compiling server (5 scala sources)
+2024.07.27 13:06:12 INFO  time: compiled server in 2.33s
+2024.07.27 13:06:12 INFO  compiling server (5 scala sources)
+2024.07.27 13:06:15 INFO  time: compiled server in 2.35s
+2024.07.27 13:06:27 INFO  compiling server (5 scala sources)
+2024.07.27 13:06:27 INFO  time: compiled server in 0.92s
+2024.07.27 13:07:23 INFO  compiling server (5 scala sources)
+2024.07.27 13:07:23 INFO  time: compiled server in 0.92s
+2024.07.27 13:07:33 INFO  compiling server (5 scala sources)
+2024.07.27 13:07:34 INFO  time: compiled server in 1.08s
+2024.07.27 13:07:34 INFO  compiling server (5 scala sources)
+2024.07.27 13:07:35 INFO  time: compiled server in 0.9s
+2024.07.27 13:08:32 INFO  compiling server (5 scala sources)
+2024.07.27 13:08:34 INFO  time: compiled server in 1.84s
+2024.07.27 13:08:34 INFO  compiling server (5 scala sources)
+2024.07.27 13:08:34 INFO  time: compiled server in 0.83s
+Jul 27, 2024 1:08:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2496
+2024.07.27 13:08:52 INFO  compiling server (5 scala sources)
+2024.07.27 13:08:52 INFO  time: compiled server in 0.67s
+2024.07.27 13:09:48 INFO  compiling server (5 scala sources)
+2024.07.27 13:09:48 INFO  time: compiled server in 0.73s
+2024.07.27 13:10:54 INFO  compiling server (5 scala sources)
+2024.07.27 13:10:56 INFO  time: compiled server in 1.94s
+2024.07.27 13:10:56 INFO  compiling server (5 scala sources)
+2024.07.27 13:10:56 INFO  time: compiled server in 0.89s
+Jul 27, 2024 1:11:09 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2600
+2024.07.27 13:11:09 INFO  compiling server (5 scala sources)
+2024.07.27 13:11:09 INFO  time: compiled server in 0.87s
+2024.07.27 13:11:10 INFO  compiling server (5 scala sources)
+2024.07.27 13:11:10 INFO  time: compiled server in 0.9s
+2024.07.27 13:11:20 INFO  compiling server (5 scala sources)
+2024.07.27 13:11:20 INFO  time: compiled server in 0.71s
+2024.07.27 13:15:03 INFO  compiling server (5 scala sources)
+2024.07.27 13:15:04 INFO  time: compiled server in 1.35s
+Jul 27, 2024 1:24:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2630
+2024.07.27 13:24:08 INFO  compiling server (5 scala sources)
+2024.07.27 13:24:10 INFO  time: compiled server in 1.77s
+2024.07.27 13:25:00 INFO  compiling server (5 scala sources)
+2024.07.27 13:25:02 INFO  time: compiled server in 1.43s
+2024.07.27 13:25:14 INFO  compiling server (5 scala sources)
+2024.07.27 13:25:35 INFO  time: compiled server in 20s
+Jul 27, 2024 1:37:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2889
+2024.07.27 13:37:25 INFO  compiling server-test (1 scala source)
+2024.07.27 13:37:28 INFO  time: compiled server-test in 2.65s
+Jul 27, 2024 1:45:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3011
+2024.07.27 13:56:33 INFO  compiling server (1 scala source)
+2024.07.27 13:56:33 INFO  time: compiled server in 0.43s
+2024.07.27 13:57:35 INFO  compiling server (2 scala sources)
+2024.07.27 13:57:35 INFO  time: compiled server in 0.96s
+2024.07.27 13:57:36 INFO  compiling server (2 scala sources)
+2024.07.27 13:57:37 INFO  time: compiled server in 1.46s
+2024.07.27 13:59:25 INFO  compiling server (4 scala sources)
+2024.07.27 13:59:28 INFO  time: compiled server in 3.2s
+2024.07.27 13:59:30 INFO  compiling server (4 scala sources)
+2024.07.27 13:59:31 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 13:59:34 INFO  time: compiled server in 3.98s
+2024.07.27 13:59:35 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 13:59:35 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 13:59:37 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 13:59:38 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 13:59:39 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 13:59:40 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 13:59:41 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 13:59:42 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 13:59:44 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 13:59:46 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 13:59:48 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 13:59:49 INFO  compiling server (4 scala sources)
+2024.07.27 13:59:51 INFO  time: compiled server in 2.72s
+2024.07.27 13:59:52 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:00:05 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:00:29 INFO  compiling server (4 scala sources)
+2024.07.27 14:00:32 INFO  time: compiled server in 3.09s
+2024.07.27 14:00:52 INFO  compiling server (4 scala sources)
+2024.07.27 14:00:54 INFO  time: compiled server in 2.7s
+2024.07.27 14:00:56 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:00:58 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:00:58 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:00:59 INFO  compiling server (4 scala sources)
+Jul 27, 2024 2:01:00 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3677
+2024.07.27 14:01:02 INFO  time: compiled server in 2.61s
+2024.07.27 14:01:22 INFO  compiling server (4 scala sources)
+2024.07.27 14:01:24 INFO  time: compiled server in 2.12s
+2024.07.27 14:01:28 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:01:29 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:13 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:23 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:25 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:25 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:26 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:26 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:27 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:28 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:29 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:30 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:31 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:33 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:35 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:37 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:41 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:41 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:42 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:43 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:45 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:45 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:48 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:48 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:51 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:51 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:52 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:53 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:53 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:55 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:56 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:56 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:57 INFO  compiling server (4 scala sources)
+2024.07.27 14:02:58 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:02:59 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:03:00 INFO  time: compiled server in 2.54s
+2024.07.27 14:03:00 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:03:06 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:03:07 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:03:09 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:03:10 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:03:10 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+Jul 27, 2024 2:03:13 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 3976
+2024.07.27 14:03:13 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:03:16 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:03:17 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:03:17 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:03:20 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:03:22 INFO  compiling server (4 scala sources)
+2024.07.27 14:03:24 INFO  time: compiled server in 2.1s
+2024.07.27 14:03:24 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:03:32 INFO  compiling server (4 scala sources)
+2024.07.27 14:03:34 INFO  time: compiled server in 2.27s
+2024.07.27 14:03:37 INFO  compiling server (4 scala sources)
+2024.07.27 14:03:39 INFO  time: compiled server in 2.29s
+Jul 27, 2024 2:03:44 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4050
+2024.07.27 14:05:07 INFO  compiling server (2 scala sources)
+2024.07.27 14:05:09 INFO  time: compiled server in 1.57s
+Jul 27, 2024 2:05:21 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4215
+Jul 27, 2024 2:05:24 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 4222
+2024.07.27 14:05:26 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:05:29 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:06:34 INFO  compiling server (2 scala sources)
+2024.07.27 14:06:35 INFO  time: compiled server in 1.71s
+2024.07.27 14:06:40 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:06:41 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:07:15 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:07:17 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:07:18 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:07:18 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:07:18 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:07:19 INFO  compiling server (2 scala sources)
+2024.07.27 14:07:21 INFO  time: compiled server in 1.58s
+2024.07.27 14:07:21 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:07:45 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:07:46 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:07:47 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:07:48 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:07:50 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:07:51 INFO  compiling server (2 scala sources)
+2024.07.27 14:07:51 INFO  time: compiled server in 0.36s
+2024.07.27 14:07:51 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:08:00 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:08:01 INFO  compiling server (2 scala sources)
+2024.07.27 14:08:01 INFO  time: compiled server in 0.35s
+2024.07.27 14:08:01 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:08:07 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:08:08 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:08:10 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:08:12 WARN  Could not load snapshot text for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/Application.scala
+2024.07.27 14:08:12 INFO  compiling server (2 scala sources)
+2024.07.27 14:08:14 INFO  time: compiled server in 1.53s
+2024.07.27 14:08:27 INFO  compiling server (1 scala source)
+2024.07.27 14:08:28 INFO  time: compiled server in 1.15s

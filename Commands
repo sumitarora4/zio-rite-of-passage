@@ -1,0 +1,37 @@
+Read - by name arguments
+
+sbt
+project server
+compile
+
+
+sbt 
+project server
+Test/compile
+
+
+sbt
+project server
+test
+
+-------
+
+docker-compose up
+
+sumitarora@sumits-MacBook-Pro zio-rite-of-passage % docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                              NAMES
+301dde037eb0        postgres            "docker-entrypoint.s…"   6 days ago          Up 2 minutes        5432/tcp, 0.0.0.0:5437->5437/tcp   zio-rite-of-passage_db_1
+sumitarora@sumits-MacBook-Pro zio-rite-of-passage % docker exec -it zio-rite-of-passage_db_1 psql -U docker
+psql (12.3 (Debian 12.3-1.pgdg100+1))
+Type "help" for help.
+
+docker=# \c reviewboard
+You are now connected to database "reviewboard" as user "docker".
+reviewboard=# 
+reviewboard=# 
+reviewboard=# \dt
+          List of relations
+ Schema |   Name    | Type  | Owner  
+--------+-----------+-------+--------
+ public | companies | table | docker
+(1 row)

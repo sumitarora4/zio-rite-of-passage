@@ -7,7 +7,7 @@ import zio.ZIO
 import sttp.tapir.server.ServerEndpoint
 import zio.Task
 import com.rockthejvm.reviewboard.services.CompanyService
-import com.rockthejvm.reviewboard.services.CompanyServiceDummy
+import com.rockthejvm.reviewboard.services.CompanyServiceLive
 
 class CompanyController private (service: CompanyService) extends CompanyEndpoints with BaseController{
 
