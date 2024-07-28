@@ -145,11 +145,14 @@ replay_pid*
 # http://www.scala-sbt.org/release/docs/Getting-Started/Directories.html#configuring-version-control
 
 dist/*
-target/
+target/*
 lib_managed/
 src_managed/
 project/boot/
 project/plugins/project/
+project/target/*
+project/.bloop/*
+project/project/*
 .history
 .cache
 .lib/
@@ -176,7 +179,7 @@ modules/app/.DS_Store
 modules/app/.parcel-cache
 modules/app/node_modules
 modules/app/dist
-
+modules/server/target/*
 ### Bloop
 .bloop/
 
@@ -190,3 +193,4 @@ modules/app/dist-prod
 
 /**/.DS_Store
 .DS_Store
+
