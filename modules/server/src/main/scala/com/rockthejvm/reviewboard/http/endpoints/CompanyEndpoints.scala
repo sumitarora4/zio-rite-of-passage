@@ -32,6 +32,5 @@ trait CompanyEndpoints {
     .in("companies" / path[String]("id"))
     .get
     .out(jsonBody[Option[Company]])
-  
-  
+
 }

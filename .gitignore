@@ -153,7 +153,7 @@ project/plugins/project/
 project/target/*
 project/.bloop/*
 project/project/*
-.history
+.history3
 .cache
 .lib/
 

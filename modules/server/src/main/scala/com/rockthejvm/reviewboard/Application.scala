@@ -9,8 +9,7 @@ import com.rockthejvm.reviewboard.http.controllers.HealthController
 import com.rockthejvm.reviewboard.http.controllers.CompanyController
 import com.rockthejvm.reviewboard.http.HttpApi
 import com.rockthejvm.reviewboard.services.*
-import com.rockthejvm.reviewboard.repositories.* 
-
+import com.rockthejvm.reviewboard.repositories.*
 
 object Application extends ZIOAppDefault {
 
@@ -24,7 +23,7 @@ object Application extends ZIOAppDefault {
           ZioHttpServerOptions.default // can add configs e.g. CORS
         ).toHttp(endpoints)
       )
-      _ <- Console.printLine("Rock the jvm...")
+//      _ <- Console.printLine("Rock the jvm...")
     } yield ()
   override def run = serverProgram.provide(
     Server.default,
@@ -32,7 +31,7 @@ object Application extends ZIOAppDefault {
     CompanyServiceLive.layer,
     // repo(db) layer
     CompanyRepositoryLive.layer,
-    // mandatory quill layer  
+    // mandatory quill layer
     Repository.dataLayer
-    )
+  )
 }

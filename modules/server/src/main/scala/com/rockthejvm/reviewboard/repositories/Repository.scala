@@ -5,13 +5,13 @@ import io.getquill.SnakeCase
 
 object Repository {
 
-    def quillLayer = 
-         Quill.Postgres.fromNamingStrategy(SnakeCase) // quill instance
+  def quillLayer =
+    Quill.Postgres.fromNamingStrategy(SnakeCase) // quill instance
 
-    def datasourceLayer =     
-        Quill.DataSource.fromPrefix("rockthejvm.db")
+  def datasourceLayer =
+    Quill.DataSource.fromPrefix("rockthejvm.db")
 
-    val dataLayer = 
-        datasourceLayer >>> quillLayer
-  
+  val dataLayer =
+    datasourceLayer >>> quillLayer
+
 }
