@@ -3356,3 +3356,966 @@ WARNING: Unmatched cancel notification for request id 218
 2024.07.28 15:44:39 INFO  Shutting down server
 2024.07.28 15:44:39 INFO  shutting down Metals
 2024.07.28 15:44:40 INFO  Shut down connection with build server.
+2024.07.28 16:19:21 INFO  Started: Metals version 1.3.4 in folders '/Users/sumitarora/Desktop/zio-rite-of-passage' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@1d7d4e30]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@149bd440]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@1d7d4e30]
+2024.07.28 16:19:23 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.28 16:19:26 INFO  Attempting to connect to the build server...
+2024.07.28 16:19:26 INFO  Running BSP server List(/Users/sumitarora/Library/Java/JavaVirtualMachines/jbr-17.0.8/Contents/Home/bin/java, -Xms100m, -Xmx100m, -classpath, /usr/local/Cellar/sbt/1.0.0/libexec/bin/sbt-launch.jar, -Dsbt.script=/usr/local/bin/sbt, xsbt.boot.Boot, -bsp)
+2024.07.28 16:19:26 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.07.28 16:19:31 INFO  time: Connected to build server in 5.57s
+2024.07.28 16:19:31 INFO  Connected to Build server: sbt v1.9.7
+2024.07.28 16:19:31 INFO  Processing workspace/buildTargets
+2024.07.28 16:19:35 INFO  Processing buildTarget/scalacOptions
+2024.07.28 16:19:35 INFO  Processing buildTarget/sources
+2024.07.28 16:19:35 INFO  Processing buildTarget/dependencySources
+2024.07.28 16:19:41 INFO  time: Imported build in 9.87s
+2024.07.28 16:19:41 INFO  running doctor check
+2024.07.28 16:19:41 INFO  java targets: 
+2024.07.28 16:19:53 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.07.28 16:19:58 INFO  time: indexed workspace in 16s
+2024.07.28 16:19:58 INFO  Processing buildTarget/scalaTestClasses
+2024.07.28 16:19:58 INFO  compiling foundations
+2024.07.28 16:19:58 INFO  compiling server
+2024.07.28 16:19:59 INFO  compiling 1 Scala source to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/foundations/target/scala-3.3.1/classes ...
+2024.07.28 16:19:59 INFO  compiling 13 Scala sources to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/classes ...
+2024.07.28 16:20:14 INFO  done compiling
+2024.07.28 16:20:14 INFO  time: compiled foundations in 16s
+2024.07.28 16:20:14 INFO  compiling foundations-test
+2024.07.28 16:20:14 INFO  time: compiled foundations-test in 17ms
+2024.07.28 16:20:20 INFO  -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:27:8 
+27 |    run {
+   |    ^
+   |Quill Query (compiled in 415ms): INSERT INTO companies (slug,name,url,country,location,industry,image,tag) VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING id, slug, name, url, country, location, industry, image, tag
+28 |      query[Company]
+29 |        .insertValue(lift(company))
+30 |        .returning(r => r)
+31 |    }
+2024.07.28 16:20:24 INFO  -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:35:21 
+35 |      updated <- run {
+   |                 ^
+   |Quill Query (compiled in 73ms): UPDATE companies AS x3 SET slug = ?, name = ?, url = ?, country = ?, location = ?, industry = ?, image = ?, tag = ? WHERE x3.id = ? RETURNING id, slug, name, url, country, location, industry, image, tag
+36 |        query[Company]
+37 |          .filter(_.id == lift(id))
+38 |          .updateValue(lift(op(current)))
+39 |          .returning(r => r)
+40 |      }
+2024.07.28 16:20:26 INFO  -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:44:8 
+44 |    run {
+   |    ^
+   |Quill Query (compiled in 29ms): DELETE FROM companies AS x4 WHERE x4.id = ? RETURNING id, slug, name, url, country, location, industry, image, tag
+45 |      query[Company]
+46 |        .filter(_.id == lift(id))
+47 |        .delete
+48 |        .returning(r => r)
+49 |    }
+2024.07.28 16:20:28 INFO  -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:51:8 
+51 |    run {
+   |    ^
+   |Quill Query (compiled in 100ms): SELECT x5.id, x5.slug, x5.name, x5.url, x5.country, x5.location, x5.industry, x5.image, x5.tag FROM companies x5 WHERE x5.id = ?
+52 |      query[Company]
+53 |        .filter(_.id == lift(id))
+54 |    }.map(_.headOption)
+2024.07.28 16:20:30 INFO  -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:57:8 
+57 |    run {
+   |    ^
+   |Quill Query (compiled in 13ms): SELECT x7.id, x7.slug, x7.name, x7.url, x7.country, x7.location, x7.industry, x7.image, x7.tag FROM companies x7 WHERE x7.slug = ?
+58 |      query[Company]
+59 |        .filter(_.slug == lift(slug))
+60 |    }.map(_.headOption)
+2024.07.28 16:20:30 INFO  -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:62:8 
+62 |    run {
+   |    ^
+   |Quill Query (compiled in 8ms): SELECT x.id, x.slug, x.name, x.url, x.country, x.location, x.industry, x.image, x.tag FROM companies x
+63 |      query[Company]
+64 |    }
+2024.07.28 16:20:35 INFO  done compiling
+2024.07.28 16:20:35 INFO  time: compiled server in 36s
+2024.07.28 16:20:35 INFO  compiling root
+2024.07.28 16:20:35 INFO  compiling server-test
+2024.07.28 16:20:35 INFO  time: compiled root in 23ms
+2024.07.28 16:20:35 INFO  compiling root-test
+2024.07.28 16:20:35 INFO  time: compiled root-test in 15ms
+2024.07.28 16:20:35 INFO  compiling 2 Scala sources to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.07.28 16:20:39 ERROR -- Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:6:6 
+6 |class CompanyServiceSpec extends ZIOSpecDefault{
+  |      ^
+  |class CompanyServiceSpec needs to be abstract, since:
+  |it has 2 unimplemented members.
+  |/** As seen from class CompanyServiceSpec, the missing signatures are as follows.
+  | *  For convenience, these are usable as stub implementations.
+  | */
+  |  // Members declared in zio.test.ZIOSpecAbstract
+  |  def spec:
+  |  zio.test.Spec[
+  |    CompanyServiceSpec.this.Environment & (zio.test.TestEnvironment & zio.Scope)
+  |      ,
+  |  Any] = ???
+  |  
+  |  // Members declared in zio.test.ZIOSpecDefault
+  |  def spec: zio.test.Spec[zio.test.TestEnvironment & zio.Scope, Any] = ???
+2024.07.28 16:20:39 ERROR one error found
+2024.07.28 16:20:39 INFO  time: compiled server-test in 3.74s
+2024.07.28 16:20:39 INFO  Processing buildTarget/scalaMainClasses
+2024.07.28 16:20:39 INFO  compiling foundations
+2024.07.28 16:20:39 INFO  time: compiled foundations in 18ms
+2024.07.28 16:20:39 INFO  compiling server
+2024.07.28 16:20:39 INFO  time: compiled server in 19ms
+2024.07.28 16:20:39 INFO  compiling foundations-test
+2024.07.28 16:20:39 INFO  compiling server-test
+2024.07.28 16:20:39 INFO  compiling root
+2024.07.28 16:20:39 INFO  time: compiled foundations-test in 32ms
+2024.07.28 16:20:39 INFO  compiling 2 Scala sources to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.07.28 16:20:39 INFO  time: compiled root in 63ms
+2024.07.28 16:20:39 INFO  compiling root-test
+2024.07.28 16:20:39 INFO  time: compiled root-test in 14ms
+2024.07.28 16:20:41 ERROR -- Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:6:6 
+6 |class CompanyServiceSpec extends ZIOSpecDefault{
+  |      ^
+  |class CompanyServiceSpec needs to be abstract, since:
+  |it has 2 unimplemented members.
+  |/** As seen from class CompanyServiceSpec, the missing signatures are as follows.
+  | *  For convenience, these are usable as stub implementations.
+  | */
+  |  // Members declared in zio.test.ZIOSpecAbstract
+  |  def spec:
+  |  zio.test.Spec[
+  |    CompanyServiceSpec.this.Environment & (zio.test.TestEnvironment & zio.Scope)
+  |      ,
+  |  Any] = ???
+  |  
+  |  // Members declared in zio.test.ZIOSpecDefault
+  |  def spec: zio.test.Spec[zio.test.TestEnvironment & zio.Scope, Any] = ???
+2024.07.28 16:20:41 ERROR one error found
+2024.07.28 16:20:41 INFO  time: compiled server-test in 2.32s
+2024.07.28 16:20:41 INFO  Processing buildTarget/compile
+2024.07.28 16:20:41 INFO  compiling server
+2024.07.28 16:20:41 INFO  time: compiled server in 15ms
+2024.07.28 16:20:41 INFO  compiling server-test
+2024.07.28 16:20:41 INFO  compiling foundations
+2024.07.28 16:20:41 INFO  time: compiled foundations in 18ms
+2024.07.28 16:20:41 INFO  compiling root
+2024.07.28 16:20:41 INFO  time: compiled root in 14ms
+2024.07.28 16:20:41 INFO  compiling 2 Scala sources to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.07.28 16:20:41 INFO  compiling root-test
+2024.07.28 16:20:41 INFO  time: compiled root-test in 16ms
+2024.07.28 16:20:44 ERROR -- Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:6:6 
+6 |class CompanyServiceSpec extends ZIOSpecDefault{
+  |      ^
+  |class CompanyServiceSpec needs to be abstract, since:
+  |it has 2 unimplemented members.
+  |/** As seen from class CompanyServiceSpec, the missing signatures are as follows.
+  | *  For convenience, these are usable as stub implementations.
+  | */
+  |  // Members declared in zio.test.ZIOSpecAbstract
+  |  def spec:
+  |  zio.test.Spec[
+  |    CompanyServiceSpec.this.Environment & (zio.test.TestEnvironment & zio.Scope)
+  |      ,
+  |  Any] = ???
+  |  
+  |  // Members declared in zio.test.ZIOSpecDefault
+  |  def spec: zio.test.Spec[zio.test.TestEnvironment & zio.Scope, Any] = ???
+2024.07.28 16:20:44 ERROR one error found
+2024.07.28 16:20:44 INFO  time: compiled server-test in 2.38s
+2024.07.28 16:20:44 ERROR (server / Test / compileIncremental) Compilation failed
+2024.07.28 16:20:44 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (server / Test / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.07.28 16:20:44 INFO  Processing buildTarget/compile
+2024.07.28 16:20:44 INFO  Processing buildTarget/scalaMainClasses
+2024.07.28 16:20:44 INFO  compiling server
+2024.07.28 16:20:44 INFO  time: compiled server in 23ms
+2024.07.28 16:20:44 INFO  compiling server-test
+2024.07.28 16:20:44 INFO  compiling foundations
+2024.07.28 16:20:44 INFO  time: compiled foundations in 14ms
+2024.07.28 16:20:44 INFO  compiling 2 Scala sources to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.07.28 16:20:44 INFO  compiling root
+2024.07.28 16:20:44 INFO  time: compiled root in 16ms
+2024.07.28 16:20:44 INFO  compiling root-test
+2024.07.28 16:20:44 INFO  time: compiled root-test in 14ms
+2024.07.28 16:20:48 ERROR -- Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:6:6 
+6 |class CompanyServiceSpec extends ZIOSpecDefault{
+  |      ^
+  |class CompanyServiceSpec needs to be abstract, since:
+  |it has 2 unimplemented members.
+  |/** As seen from class CompanyServiceSpec, the missing signatures are as follows.
+  | *  For convenience, these are usable as stub implementations.
+  | */
+  |  // Members declared in zio.test.ZIOSpecAbstract
+  |  def spec:
+  |  zio.test.Spec[
+  |    CompanyServiceSpec.this.Environment & (zio.test.TestEnvironment & zio.Scope)
+  |      ,
+  |  Any] = ???
+  |  
+  |  // Members declared in zio.test.ZIOSpecDefault
+  |  def spec: zio.test.Spec[zio.test.TestEnvironment & zio.Scope, Any] = ???
+2024.07.28 16:20:48 ERROR one error found
+2024.07.28 16:20:48 INFO  time: compiled server-test in 2.83s
+2024.07.28 16:20:48 INFO  Processing buildTarget/scalaTestClasses
+2024.07.28 16:20:48 INFO  compiling server
+2024.07.28 16:20:48 INFO  time: compiled server in 23ms
+2024.07.28 16:20:48 INFO  compiling foundations
+2024.07.28 16:20:48 INFO  compiling server-test
+2024.07.28 16:20:48 INFO  time: compiled foundations in 13ms
+2024.07.28 16:20:48 INFO  compiling root
+2024.07.28 16:20:48 INFO  compiling 2 Scala sources to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.07.28 16:20:48 INFO  time: compiled root in 17ms
+2024.07.28 16:20:48 INFO  compiling root-test
+2024.07.28 16:20:48 INFO  time: compiled root-test in 14ms
+2024.07.28 16:20:50 ERROR -- Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:6:6 
+6 |class CompanyServiceSpec extends ZIOSpecDefault{
+  |      ^
+  |class CompanyServiceSpec needs to be abstract, since:
+  |it has 2 unimplemented members.
+  |/** As seen from class CompanyServiceSpec, the missing signatures are as follows.
+  | *  For convenience, these are usable as stub implementations.
+  | */
+  |  // Members declared in zio.test.ZIOSpecAbstract
+  |  def spec:
+  |  zio.test.Spec[
+  |    CompanyServiceSpec.this.Environment & (zio.test.TestEnvironment & zio.Scope)
+  |      ,
+  |  Any] = ???
+  |  
+  |  // Members declared in zio.test.ZIOSpecDefault
+  |  def spec: zio.test.Spec[zio.test.TestEnvironment & zio.Scope, Any] = ???
+2024.07.28 16:20:50 ERROR one error found
+2024.07.28 16:20:50 INFO  time: compiled server-test in 2.14s
+2024.07.28 16:20:50 INFO  Processing buildTarget/compile
+2024.07.28 16:20:50 INFO  compiling server
+2024.07.28 16:20:50 INFO  time: compiled server in 18ms
+2024.07.28 16:20:50 INFO  compiling server-test
+2024.07.28 16:20:50 INFO  compiling 2 Scala sources to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.07.28 16:20:53 ERROR -- Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:6:6 
+6 |class CompanyServiceSpec extends ZIOSpecDefault{
+  |      ^
+  |class CompanyServiceSpec needs to be abstract, since:
+  |it has 2 unimplemented members.
+  |/** As seen from class CompanyServiceSpec, the missing signatures are as follows.
+  | *  For convenience, these are usable as stub implementations.
+  | */
+  |  // Members declared in zio.test.ZIOSpecAbstract
+  |  def spec:
+  |  zio.test.Spec[
+  |    CompanyServiceSpec.this.Environment & (zio.test.TestEnvironment & zio.Scope)
+  |      ,
+  |  Any] = ???
+  |  
+  |  // Members declared in zio.test.ZIOSpecDefault
+  |  def spec: zio.test.Spec[zio.test.TestEnvironment & zio.Scope, Any] = ???
+2024.07.28 16:20:53 ERROR one error found
+2024.07.28 16:20:53 INFO  time: compiled server-test in 2.11s
+2024.07.28 16:20:53 ERROR (server / Test / compileIncremental) Compilation failed
+2024.07.28 16:20:53 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (server / Test / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.07.28 16:20:53 INFO  Processing buildTarget/jvmRunEnvironment
+2024.07.28 16:20:53 INFO  compiling server
+2024.07.28 16:20:53 INFO  time: compiled server in 25ms
+2024.07.28 16:20:53 INFO  Processing buildTarget/scalaMainClasses
+2024.07.28 16:20:53 INFO  compiling server
+2024.07.28 16:20:53 INFO  time: compiled server in 19ms
+2024.07.28 16:20:53 INFO  compiling server-test
+2024.07.28 16:20:53 INFO  compiling 2 Scala sources to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.07.28 16:20:55 ERROR -- Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:6:6 
+6 |class CompanyServiceSpec extends ZIOSpecDefault{
+  |      ^
+  |class CompanyServiceSpec needs to be abstract, since:
+  |it has 2 unimplemented members.
+  |/** As seen from class CompanyServiceSpec, the missing signatures are as follows.
+  | *  For convenience, these are usable as stub implementations.
+  | */
+  |  // Members declared in zio.test.ZIOSpecAbstract
+  |  def spec:
+  |  zio.test.Spec[
+  |    CompanyServiceSpec.this.Environment & (zio.test.TestEnvironment & zio.Scope)
+  |      ,
+  |  Any] = ???
+  |  
+  |  // Members declared in zio.test.ZIOSpecDefault
+  |  def spec: zio.test.Spec[zio.test.TestEnvironment & zio.Scope, Any] = ???
+2024.07.28 16:20:55 ERROR one error found
+2024.07.28 16:20:55 INFO  time: compiled server-test in 1.58s
+2024.07.28 16:20:55 ERROR (server / Test / compileIncremental) Compilation failed
+2024.07.28 16:20:55 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (server / Test / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.07.28 16:20:55 INFO  Processing buildTarget/scalaTestClasses
+2024.07.28 16:20:55 INFO  compiling server
+2024.07.28 16:20:55 INFO  time: compiled server in 20ms
+2024.07.28 16:20:55 INFO  compiling server-test
+2024.07.28 16:20:55 INFO  compiling 2 Scala sources to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.07.28 16:20:58 ERROR -- Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:6:6 
+6 |class CompanyServiceSpec extends ZIOSpecDefault{
+  |      ^
+  |class CompanyServiceSpec needs to be abstract, since:
+  |it has 2 unimplemented members.
+  |/** As seen from class CompanyServiceSpec, the missing signatures are as follows.
+  | *  For convenience, these are usable as stub implementations.
+  | */
+  |  // Members declared in zio.test.ZIOSpecAbstract
+  |  def spec:
+  |  zio.test.Spec[
+  |    CompanyServiceSpec.this.Environment & (zio.test.TestEnvironment & zio.Scope)
+  |      ,
+  |  Any] = ???
+  |  
+  |  // Members declared in zio.test.ZIOSpecDefault
+  |  def spec: zio.test.Spec[zio.test.TestEnvironment & zio.Scope, Any] = ???
+2024.07.28 16:20:58 ERROR one error found
+2024.07.28 16:20:58 INFO  time: compiled server-test in 3.18s
+2024.07.28 16:20:58 ERROR (server / Test / compileIncremental) Compilation failed
+2024.07.28 16:20:58 INFO  Scala test classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (server / Test / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.07.28 16:20:58 INFO  Processing buildTarget/compile
+2024.07.28 16:20:58 INFO  compiling server
+2024.07.28 16:20:58 INFO  time: compiled server in 15ms
+2024.07.28 16:20:58 INFO  Processing buildTarget/scalaTestClasses
+2024.07.28 16:20:58 INFO  Processing buildTarget/scalaMainClasses
+2024.07.28 16:20:58 INFO  compiling server
+2024.07.28 16:20:58 INFO  time: compiled server in 18ms
+2024.07.28 16:21:31 INFO  Processing buildTarget/compile
+2024.07.28 16:22:31 INFO  Processing buildTarget/compile
+2024.07.28 16:23:31 INFO  Processing buildTarget/compile
+2024.07.28 16:24:31 INFO  Processing buildTarget/compile
+2024.07.28 16:25:31 INFO  Processing buildTarget/compile
+2024.07.28 16:26:31 INFO  Processing buildTarget/compile
+2024.07.28 16:26:52 INFO  Shutting down server
+2024.07.28 16:26:52 INFO  shutting down Metals
+2024.07.28 16:26:52 INFO  Shut down connection with build server.
+2024.07.28 16:26:52 INFO  Exiting server
+2024.08.03 14:21:51 INFO  Started: Metals version 1.3.4 in folders '/Users/sumitarora/Desktop/zio-rite-of-passage' for client Visual Studio Code 1.90.2.
+2024.08.03 15:59:58 INFO  Started: Metals version 1.3.5 in folders '/Users/sumitarora/Desktop/zio-rite-of-passage' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@72af57e5]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@3e002236]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@72af57e5]
+2024.08.03 16:00:01 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+Aug 03, 2024 4:00:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 2
+Aug 03, 2024 4:00:04 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 1
+2024.08.03 16:00:04 INFO  Attempting to connect to the build server...
+2024.08.03 16:00:04 WARN  no build target for: /Users/sumitarora/Desktop/zio-rite-of-passage/project/project/metals.sbt
+2024.08.03 16:00:04 WARN  no build target for: /Users/sumitarora/Desktop/zio-rite-of-passage/project/metals.sbt
+2024.08.03 16:00:04 INFO  no build target found for /Users/sumitarora/Desktop/zio-rite-of-passage/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.08.03 16:00:18 INFO  no build target found for /Users/sumitarora/Desktop/zio-rite-of-passage/project/project/metals.sbt. Using presentation compiler with project's scala-library version: 3.3.3
+2024.08.03 16:00:19 INFO  Running BSP server List(/Users/sumitarora/.sdkman/candidates/java/17.0.8-tem/bin/java, -Xms100m, -Xmx100m, -classpath, /usr/local/Cellar/sbt/1.0.0/libexec/bin/sbt-launch.jar, -Dsbt.script=/usr/local/bin/sbt, xsbt.boot.Boot, -bsp)
+2024.08.03 16:00:19 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.08.03 16:00:21 INFO  BSP server: [info] server was not detected. starting an instance
+2024.08.03 16:00:27 INFO  BSP server: [info] welcome to sbt 1.9.7 (JetBrains s.r.o. Java 17.0.8)
+2024.08.03 16:00:29 INFO  BSP server: [info] loading settings for project global-plugins from idea.sbt,plugins.sbt ...
+2024.08.03 16:00:32 INFO  BSP server: [info] loading global plugins from /Users/sumitarora/.sbt/1.0/plugins
+2024.08.03 16:00:35 INFO  BSP server: [info] loading settings for project zio-rite-of-passage-build-build-build from metals.sbt ...
+2024.08.03 16:00:35 INFO  BSP server: [info] loading project definition from /Users/sumitarora/Desktop/zio-rite-of-passage/project/project/project
+2024.08.03 16:00:40 INFO  BSP server: [info] loading settings for project zio-rite-of-passage-build-build from metals.sbt ...
+2024.08.03 16:00:40 INFO  BSP server: [info] loading project definition from /Users/sumitarora/Desktop/zio-rite-of-passage/project/project
+2024.08.03 16:00:51 INFO  BSP server: [success] Generated .bloop/zio-rite-of-passage-build-build.json
+2024.08.03 16:00:51 INFO  BSP server: [success] Total time: 10 s, completed 3 Aug 2024, 4:00:51 pm
+2024.08.03 16:00:56 INFO  BSP server: [info] loading settings for project zio-rite-of-passage-build from metals.sbt,plugins.sbt ...
+2024.08.03 16:00:56 INFO  BSP server: [info] loading project definition from /Users/sumitarora/Desktop/zio-rite-of-passage/project
+2024.08.03 16:01:04 INFO  Shutting down server
+2024.08.03 16:01:04 INFO  shutting down Metals
+2024.08.03 16:01:04 INFO  Exiting server
+2024.08.03 16:01:27 INFO  Started: Metals version 1.3.5 in folders '/Users/sumitarora/Desktop/zio-rite-of-passage' for client Visual Studio Code 1.90.2.
+SLF4J(W): Class path contains multiple SLF4J providers.
+SLF4J(W): Found provider [scribe.slf4j.ScribeServiceProvider@3e002236]
+SLF4J(W): Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@45089e24]
+SLF4J(W): See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J(I): Actual provider is of type [scribe.slf4j.ScribeServiceProvider@3e002236]
+2024.08.03 16:01:29 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.08.03 16:01:30 INFO  Attempting to connect to the build server...
+2024.08.03 16:01:30 INFO  Running BSP server List(/Users/sumitarora/Library/Java/JavaVirtualMachines/jbr-17.0.8/Contents/Home/bin/java, -Xms100m, -Xmx100m, -classpath, /usr/local/Cellar/sbt/1.0.0/libexec/bin/sbt-launch.jar, -Dsbt.script=/usr/local/bin/sbt, xsbt.boot.Boot, -bsp)
+2024.08.03 16:01:30 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/bsp.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/bsp.trace.json
+2024.08.03 16:01:31 INFO  no build target found for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/Repository.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.08.03 16:01:39 INFO  time: Connected to build server in 8.68s
+2024.08.03 16:01:39 INFO  Connected to Build server: sbt v1.9.7
+2024.08.03 16:01:39 INFO  Processing workspace/buildTargets
+2024.08.03 16:01:41 INFO  no build target found for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.08.03 16:01:41 INFO  no build target found for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.08.03 16:01:41 INFO  no build target found for /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala. Using presentation compiler with project's scala-library version: 3.3.3
+2024.08.03 16:01:45 INFO  Processing buildTarget/scalacOptions
+2024.08.03 16:01:45 INFO  Processing buildTarget/sources
+2024.08.03 16:01:46 INFO  Processing buildTarget/dependencySources
+2024.08.03 16:01:50 INFO  time: Imported build in 11s
+2024.08.03 16:01:51 INFO  running doctor check
+2024.08.03 16:01:51 INFO  java targets: 
+2024.08.03 16:02:26 WARN  Flyway upgrade recommended: H2 2.3.230 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.2.220.
+2024.08.03 16:02:31 INFO  Processing buildTarget/scalaTestClasses
+2024.08.03 16:02:31 INFO  time: indexed workspace in 40s
+2024.08.03 16:02:33 INFO  compiling foundations
+2024.08.03 16:02:33 INFO  compiling server
+2024.08.03 16:02:33 INFO  time: compiled foundations in 0.78s
+2024.08.03 16:02:33 INFO  compiling foundations-test
+2024.08.03 16:02:34 INFO  time: compiled foundations-test in 0.66s
+2024.08.03 16:02:34 INFO  compiling 13 Scala sources to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/classes ...
+2024.08.03 16:03:08 INFO  -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:27:8 
+27 |    run {
+   |    ^
+   |Quill Query (compiled in 384ms): INSERT INTO companies (slug,name,url,country,location,industry,image,tag) VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING id, slug, name, url, country, location, industry, image, tag
+28 |      query[Company]
+29 |        .insertValue(lift(company))
+30 |        .returning(r => r)
+31 |    }
+2024.08.03 16:03:13 INFO  -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:35:21 
+35 |      updated <- run {
+   |                 ^
+   |Quill Query (compiled in 98ms): UPDATE companies AS x3 SET slug = ?, name = ?, url = ?, country = ?, location = ?, industry = ?, image = ?, tag = ? WHERE x3.id = ? RETURNING id, slug, name, url, country, location, industry, image, tag
+36 |        query[Company]
+37 |          .filter(_.id == lift(id))
+38 |          .updateValue(lift(op(current)))
+39 |          .returning(r => r)
+40 |      }
+2024.08.03 16:03:16 INFO  -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:44:8 
+44 |    run {
+   |    ^
+   |Quill Query (compiled in 28ms): DELETE FROM companies AS x4 WHERE x4.id = ? RETURNING id, slug, name, url, country, location, industry, image, tag
+45 |      query[Company]
+46 |        .filter(_.id == lift(id))
+47 |        .delete
+48 |        .returning(r => r)
+49 |    }
+2024.08.03 16:03:18 INFO  -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:51:8 
+51 |    run {
+   |    ^
+   |Quill Query (compiled in 116ms): SELECT x5.id, x5.slug, x5.name, x5.url, x5.country, x5.location, x5.industry, x5.image, x5.tag FROM companies x5 WHERE x5.id = ?
+52 |      query[Company]
+53 |        .filter(_.id == lift(id))
+54 |    }.map(_.headOption)
+2024.08.03 16:03:20 INFO  -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:57:8 
+57 |    run {
+   |    ^
+   |Quill Query (compiled in 17ms): SELECT x7.id, x7.slug, x7.name, x7.url, x7.country, x7.location, x7.industry, x7.image, x7.tag FROM companies x7 WHERE x7.slug = ?
+58 |      query[Company]
+59 |        .filter(_.slug == lift(slug))
+60 |    }.map(_.headOption)
+2024.08.03 16:03:20 INFO  -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:62:8 
+62 |    run {
+   |    ^
+   |Quill Query (compiled in 6ms): SELECT x.id, x.slug, x.name, x.url, x.country, x.location, x.industry, x.image, x.tag FROM companies x
+63 |      query[Company]
+64 |    }
+2024.08.03 16:03:30 INFO  done compiling
+2024.08.03 16:03:30 INFO  time: compiled server in 57s
+2024.08.03 16:03:30 INFO  compiling root
+2024.08.03 16:03:30 INFO  time: compiled root in 25ms
+2024.08.03 16:03:30 INFO  compiling server-test
+2024.08.03 16:03:30 INFO  compiling root-test
+2024.08.03 16:03:30 INFO  time: compiled root-test in 28ms
+2024.08.03 16:03:30 INFO  compiling 2 Scala sources to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.08.03 16:03:35 INFO  done compiling
+2024.08.03 16:03:35 INFO  time: compiled server-test in 4.7s
+2024.08.03 16:03:35 INFO  Processing buildTarget/scalaMainClasses
+2024.08.03 16:03:35 INFO  compiling server
+2024.08.03 16:03:35 INFO  compiling foundations
+2024.08.03 16:03:35 INFO  time: compiled server in 34ms
+2024.08.03 16:03:35 INFO  time: compiled foundations in 26ms
+2024.08.03 16:03:35 INFO  compiling server-test
+2024.08.03 16:03:35 INFO  compiling root
+2024.08.03 16:03:35 INFO  compiling foundations-test
+2024.08.03 16:03:35 INFO  time: compiled server-test in 0.18s
+2024.08.03 16:03:35 INFO  time: compiled root in 0.18s
+2024.08.03 16:03:35 INFO  time: compiled foundations-test in 54ms
+2024.08.03 16:03:35 INFO  compiling root-test
+2024.08.03 16:03:35 INFO  time: compiled root-test in 18ms
+2024.08.03 16:03:36 INFO  Processing buildTarget/compile
+2024.08.03 16:03:36 INFO  compiling server
+2024.08.03 16:03:36 INFO  time: compiled server in 24ms
+2024.08.03 16:03:36 INFO  compiling foundations
+2024.08.03 16:03:36 INFO  compiling server-test
+2024.08.03 16:03:36 INFO  time: compiled foundations in 27ms
+2024.08.03 16:03:36 INFO  time: compiled server-test in 23ms
+2024.08.03 16:03:36 INFO  compiling root
+2024.08.03 16:03:36 INFO  time: compiled root in 17ms
+2024.08.03 16:03:36 INFO  compiling root-test
+2024.08.03 16:03:36 INFO  time: compiled root-test in 17ms
+2024.08.03 16:03:36 INFO  Processing buildTarget/compile
+2024.08.03 16:03:38 INFO  Processing buildTarget/scalaMainClasses
+2024.08.03 16:03:38 INFO  compiling server
+2024.08.03 16:03:38 INFO  time: compiled server in 29ms
+2024.08.03 16:03:38 INFO  compiling foundations
+2024.08.03 16:03:38 INFO  time: compiled foundations in 34ms
+2024.08.03 16:03:38 INFO  compiling server-test
+2024.08.03 16:03:38 INFO  time: compiled server-test in 18ms
+2024.08.03 16:03:38 INFO  compiling root
+2024.08.03 16:03:38 INFO  time: compiled root in 18ms
+2024.08.03 16:03:38 INFO  compiling root-test
+2024.08.03 16:03:38 INFO  time: compiled root-test in 16ms
+2024.08.03 16:03:39 INFO  Processing buildTarget/scalaTestClasses
+2024.08.03 16:03:39 INFO  compiling server
+2024.08.03 16:03:39 INFO  time: compiled server in 27ms
+2024.08.03 16:03:39 INFO  compiling foundations
+2024.08.03 16:03:39 INFO  compiling server-test
+2024.08.03 16:03:39 INFO  time: compiled foundations in 30ms
+2024.08.03 16:03:39 INFO  time: compiled server-test in 28ms
+2024.08.03 16:03:39 INFO  compiling root
+2024.08.03 16:03:39 INFO  time: compiled root in 16ms
+2024.08.03 16:03:39 INFO  compiling root-test
+2024.08.03 16:03:39 INFO  time: compiled root-test in 20ms
+2024.08.03 16:03:39 INFO  Processing buildTarget/compile
+2024.08.03 16:03:40 INFO  compiling server
+2024.08.03 16:03:40 INFO  time: compiled server in 19ms
+2024.08.03 16:03:40 INFO  compiling server-test
+2024.08.03 16:03:40 INFO  time: compiled server-test in 16ms
+2024.08.03 16:03:40 INFO  Processing buildTarget/jvmRunEnvironment
+2024.08.03 16:03:40 INFO  compiling server
+2024.08.03 16:03:40 INFO  time: compiled server in 18ms
+2024.08.03 16:03:40 INFO  compiling server-test
+2024.08.03 16:03:40 INFO  time: compiled server-test in 15ms
+2024.08.03 16:03:40 INFO  Processing buildTarget/jvmRunEnvironment
+2024.08.03 16:03:40 INFO  compiling server
+2024.08.03 16:03:40 INFO  time: compiled server in 20ms
+2024.08.03 16:03:40 INFO  compiling server-test
+2024.08.03 16:03:40 INFO  time: compiled server-test in 15ms
+2024.08.03 16:03:41 INFO  Processing buildTarget/jvmRunEnvironment
+2024.08.03 16:03:41 INFO  compiling server
+2024.08.03 16:03:41 INFO  time: compiled server in 24ms
+2024.08.03 16:03:41 INFO  compiling server-test
+2024.08.03 16:03:41 INFO  time: compiled server-test in 18ms
+2024.08.03 16:03:41 INFO  Processing buildTarget/jvmRunEnvironment
+2024.08.03 16:03:41 INFO  compiling server
+2024.08.03 16:03:41 INFO  time: compiled server in 24ms
+2024.08.03 16:03:41 INFO  compiling server-test
+2024.08.03 16:03:41 INFO  time: compiled server-test in 14ms
+2024.08.03 16:03:41 INFO  Processing buildTarget/jvmRunEnvironment
+2024.08.03 16:03:41 INFO  compiling server
+2024.08.03 16:03:41 INFO  time: compiled server in 18ms
+2024.08.03 16:03:42 INFO  Processing buildTarget/jvmRunEnvironment
+2024.08.03 16:03:42 INFO  compiling server
+2024.08.03 16:03:42 INFO  time: compiled server in 23ms
+2024.08.03 16:03:42 INFO  compiling server-test
+2024.08.03 16:03:42 INFO  time: compiled server-test in 6ms
+2024.08.03 16:03:42 INFO  Processing buildTarget/jvmRunEnvironment
+2024.08.03 16:03:42 INFO  compiling server
+2024.08.03 16:03:42 INFO  time: compiled server in 18ms
+2024.08.03 16:03:42 INFO  compiling server-test
+2024.08.03 16:03:42 INFO  time: compiled server-test in 13ms
+2024.08.03 16:03:42 INFO  Processing buildTarget/jvmRunEnvironment
+2024.08.03 16:03:42 INFO  compiling server
+2024.08.03 16:03:42 INFO  time: compiled server in 23ms
+2024.08.03 16:03:42 INFO  compiling server-test
+2024.08.03 16:03:42 INFO  time: compiled server-test in 15ms
+2024.08.03 16:03:43 INFO  Processing buildTarget/jvmRunEnvironment
+2024.08.03 16:03:43 INFO  compiling server
+2024.08.03 16:03:43 INFO  time: compiled server in 23ms
+2024.08.03 16:03:43 INFO  compiling server-test
+2024.08.03 16:03:43 INFO  time: compiled server-test in 15ms
+2024.08.03 16:03:43 INFO  Processing buildTarget/compile
+2024.08.03 16:03:43 INFO  Processing buildTarget/scalaMainClasses
+2024.08.03 16:03:43 INFO  compiling server
+2024.08.03 16:03:43 INFO  time: compiled server in 21ms
+2024.08.03 16:03:43 INFO  compiling server-test
+2024.08.03 16:03:43 INFO  time: compiled server-test in 12ms
+2024.08.03 16:03:43 INFO  Processing buildTarget/scalaTestClasses
+2024.08.03 16:03:43 INFO  compiling server
+2024.08.03 16:03:43 INFO  time: compiled server in 21ms
+2024.08.03 16:03:43 INFO  compiling server-test
+2024.08.03 16:03:43 INFO  time: compiled server-test in 15ms
+2024.08.03 16:03:44 INFO  Processing buildTarget/compile
+2024.08.03 16:03:44 INFO  compiling server
+2024.08.03 16:03:44 INFO  time: compiled server in 20ms
+2024.08.03 16:03:44 INFO  Processing buildTarget/jvmRunEnvironment
+2024.08.03 16:03:44 INFO  compiling server
+2024.08.03 16:03:44 INFO  time: compiled server in 13ms
+2024.08.03 16:03:44 INFO  compiling server-test
+2024.08.03 16:03:44 INFO  time: compiled server-test in 15ms
+2024.08.03 16:03:44 INFO  Processing buildTarget/scalaMainClasses
+2024.08.03 16:03:44 INFO  compiling server
+2024.08.03 16:03:44 INFO  time: compiled server in 21ms
+2024.08.03 16:03:44 INFO  Processing buildTarget/scalaTestClasses
+2024.08.03 16:04:10 INFO  Processing buildTarget/compile
+2024.08.03 16:04:10 INFO  compiling server
+2024.08.03 16:04:10 INFO  time: compiled server in 34ms
+2024.08.03 16:04:10 INFO  compiling server-test
+2024.08.03 16:04:10 INFO  time: compiled server-test in 24ms
+2024.08.03 16:04:10 INFO  Processing buildTarget/scalaMainClasses
+2024.08.03 16:04:10 INFO  compiling server
+2024.08.03 16:04:10 INFO  time: compiled server in 21ms
+2024.08.03 16:04:10 INFO  compiling server-test
+2024.08.03 16:04:10 INFO  time: compiled server-test in 24ms
+2024.08.03 16:04:11 INFO  Processing buildTarget/scalaTestClasses
+2024.08.03 16:04:11 INFO  compiling server
+2024.08.03 16:04:11 INFO  time: compiled server in 22ms
+2024.08.03 16:04:11 INFO  compiling server-test
+2024.08.03 16:04:11 INFO  time: compiled server-test in 18ms
+2024.08.03 16:04:11 INFO  Processing debugSession/start
+2024.08.03 16:04:11 INFO  compiling server
+2024.08.03 16:04:11 INFO  time: compiled server in 24ms
+2024.08.03 16:04:11 INFO  compiling server-test
+2024.08.03 16:04:11 INFO  time: compiled server-test in 15ms
+2024.08.03 16:04:13 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/dap-server.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2024.08.03 16:04:13 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/dap-client.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2024.08.03 16:04:13 INFO  Starting debug proxy for [com.rockthejvm.reviewboard.services.CompanyServiceSpec()]
+2024.08.03 16:04:13 INFO  Starting debuggee process:
+2024.08.03 16:04:13 INFO  - working directory:/Users/sumitarora/Desktop/zio-rite-of-passage/modules/server
+2024.08.03 16:04:13 INFO  - command: /Users/sumitarora/Library/Java/JavaVirtualMachines/jbr-17.0.8/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,quiet=n sbt.ForkMain 52809
+2024.08.03 16:04:13 INFO  - environment variables:
+  CLASSPATH=/Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/classes:/Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-sttp-client_3/1.2.6/tapir-sttp-client_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-json-zio_3/1.2.6/tapir-json-zio_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/client3/zio_3/3.8.8/zio_3-3.8.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-json_3/0.6.2/zio-json_3-0.6.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-zio_3/1.2.6/tapir-zio_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-zio-http-server_3/1.2.6/tapir-zio-http-server_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-swagger-ui-bundle_3/1.2.6/tapir-swagger-ui-bundle_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-sttp-stub-server_3/1.2.6/tapir-sttp-stub-server_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-logging_3/2.1.8/zio-logging_3-2.1.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-logging-slf4j_3/2.1.8/zio-logging-slf4j_3-2.1.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.4.4/logback-classic-1.4.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-test_3/2.0.19/zio-test_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-test-junit_3/2.0.19/zio-test-junit_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-test-sbt_3/2.0.19/zio-test-sbt_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-test-magnolia_3/2.0.19/zio-test-magnolia_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-mock_3/1.0.0-RC9/zio-mock_3-1.0.0-RC9.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-config_3/3.0.7/zio-config_3-3.0.7.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-config-magnolia_3/3.0.7/zio-config-magnolia_3-3.0.7.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-config-typesafe_3/3.0.7/zio-config-typesafe_3-3.0.7.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-jdbc-zio_3/4.7.3/quill-jdbc-zio_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/postgresql/postgresql/42.5.0/postgresql-42.5.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/flywaydb/flyway-core/9.7.0/flyway-core-9.7.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/scottweaver/zio-2-0-testcontainers-postgresql_3/0.9.0/zio-2-0-testcontainers-postgresql_3-0.9.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-prelude_3/1.0.0-RC16/zio-prelude_3-1.0.0-RC16.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/auth0/java-jwt/4.2.1/java-jwt-4.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/stripe/stripe-java/24.3.0/stripe-java-24.3.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.11/scala-library-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-client_3/1.2.6/tapir-client_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/client3/core_3/3.8.8/core_3-3.8.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-core_3/1.2.6/tapir-core_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-streams_3/2.0.19/zio-streams_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio_3/2.0.19/zio_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/shared/zio_3/1.3.12/zio_3-1.3.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-interop-reactivestreams_3/2.0.0/zio-interop-reactivestreams_3-2.0.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_3/2.11.0/scala-collection-compat_3-2.11.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/magnolia1_3/magnolia_3/1.3.3/magnolia_3-1.3.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-server_3/1.2.6/tapir-server_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-http_3/0.0.3/zio-http_3-0.0.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-swagger-ui_3/1.2.6/tapir-swagger-ui_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-openapi-docs_3/1.2.6/tapir-openapi-docs_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/openapi-circe-yaml_3/0.3.2/openapi-circe-yaml_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.1/slf4j-api-2.0.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-core/1.4.4/logback-core-1.4.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/portable-scala/portable-scala-reflect_2.13/1.1.2/portable-scala-reflect_2.13-1.1.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-config-derivation_3/3.0.7/zio-config-derivation_3-3.0.7.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.4.2/config-1.4.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-zio_3/4.7.3/quill-zio_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-sql_3/4.7.3/quill-sql_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-jdbc_3/4.7.3/quill-jdbc_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_3/1.0.2/scala-java8-compat_3-1.0.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/zaxxer/HikariCP/4.0.3/HikariCP-4.0.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.13.4/jackson-dataformat-toml-2.13.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/scottweaver/zio-testcontainers-models_3/0.9.0/zio-testcontainers-models_3-0.9.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/scottweaver/zillen_3/0.9.0/zillen_3-0.9.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/dimafeng/testcontainers-scala-core_3/0.40.10/testcontainers-scala-core_3-0.40.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/dimafeng/testcontainers-scala-postgresql_3/0.40.10/testcontainers-scala-postgresql_3-0.40.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-prelude-macros_3/1.0.0-RC16/zio-prelude-macros_3-1.0.0-RC16.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.13.4.2/jackson-databind-2.13.4.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/javax/activation/activation/1.1/activation-1.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/model/core_3/1.5.4/core_3-1.5.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/shared/core_3/1.3.12/core_3-1.3.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/shared/ws_3/1.3.12/ws_3-1.3.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-internal-macros_3/2.0.19/zio-internal-macros_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-stacktracer_3/2.0.19/zio-stacktracer_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/izumi-reflect_3/2.3.8/izumi-reflect_3-2.3.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-http-logging_3/0.0.3/zio-http-logging_3-0.0.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.82.Final/netty-codec-http-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.82.Final/netty-handler-proxy-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final-linux-x86_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final-linux-aarch_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-kqueue/4.1.82.Final/netty-transport-native-kqueue-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-kqueue/4.1.82.Final/netty-transport-native-kqueue-4.1.82.Final-osx-x86_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-kqueue/4.1.82.Final/netty-transport-native-kqueue-4.1.82.Final-osx-aarch_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-schema_3/0.2.1/zio-schema_3-0.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-schema-json_3/0.2.1/zio-schema-json_3-0.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/incubator/netty-incubator-transport-native-io_uring/0.0.15.Final/netty-incubator-transport-native-io_uring-0.0.15.Final-linux-x86_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/webjars/swagger-ui/4.15.5/swagger-ui-4.15.5.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-apispec-docs_3/1.2.6/tapir-apispec-docs_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/quicklens/quicklens_3/1.9.0/quicklens_3-1.9.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/openapi-model_3/0.3.2/openapi-model_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/openapi-circe_3/0.3.2/openapi-circe_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-yaml_3/0.14.2/circe-yaml_3-0.14.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/suzaku/boopickle_3/1.4.0/boopickle_3-1.4.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/pprint_3/0.8.1/pprint_3-0.8.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-engine_3/4.7.3/quill-engine_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-util_3/4.7.3/quill-util_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/typesafe/scala-logging/scala-logging_3/3.9.5/scala-logging_3-3.9.5.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.13.4/jackson-core-2.13.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-handler/4.1.82.Final/netty-handler-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/testcontainers/testcontainers/1.17.3/testcontainers-1.17.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/dimafeng/testcontainers-scala-jdbc_3/0.40.10/testcontainers-scala-jdbc_3-0.40.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/testcontainers/postgresql/1.17.3/postgresql-1.17.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.13.4/jackson-annotations-2.13.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/izumi-reflect-thirdparty-boopickle-shaded_3/2.3.8/izumi-reflect-thirdparty-boopickle-shaded_3-2.3.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-common/4.1.82.Final/netty-common-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-buffer/4.1.82.Final/netty-buffer-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport/4.1.82.Final/netty-transport-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-codec/4.1.82.Final/netty-codec-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.82.Final/netty-codec-socks-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-unix-common/4.1.82.Final/netty-transport-native-unix-common-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-classes-epoll/4.1.82.Final/netty-transport-classes-epoll-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-classes-kqueue/4.1.82.Final/netty-transport-classes-kqueue-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-schema-macros_3/0.2.1/zio-schema-macros_3-0.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-schema-derivation_3/0.2.1/zio-schema-derivation_3-0.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/incubator/netty-incubator-transport-classes-io_uring/0.0.15.Final/netty-incubator-transport-classes-io_uring-0.0.15.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/asyncapi-model_3/0.3.2/asyncapi-model_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/apispec-model_3/0.3.2/apispec-model_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/jsonschema-circe_3/0.3.2/jsonschema-circe_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-core_3/0.14.3/circe-core_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/fansi_3/0.4.0/fansi_3-0.4.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/sourcecode_3/0.3.0/sourcecode_3-0.3.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/takayahilton/sql-formatter_2.13/1.2.1/sql-formatter_2.13-1.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.7.14/scalafmt-core_2.13-3.7.14.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parallel-collections_3/1.0.4/scala-parallel-collections_3-1.0.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-resolver/4.1.82.Final/netty-resolver-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/docker-java/docker-java-api/3.2.13/docker-java-api-3.2.13.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/docker-java/docker-java-transport-zerodep/3.2.13/docker-java-transport-zerodep-3.2.13.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/testcontainers/jdbc/1.17.3/jdbc-1.17.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-parser_3/0.14.3/circe-parser_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-generic_3/0.14.3/circe-generic_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-numbers_3/0.14.3/circe-numbers_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_3/2.8.0/cats-core_3-2.8.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.7.14/scalafmt-sysops_2.13-3.7.14.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.7.14/scalafmt-config_2.13-3.7.14.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.8.10/scalameta_2.13-4.8.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.11/scala-reflect-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/docker-java/docker-java-transport/3.2.13/docker-java-transport-3.2.13.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/testcontainers/database-commons/1.17.3/database-commons-1.17.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-jawn_3/0.14.3/circe-jawn_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_3/2.8.0/cats-kernel_3-2.8.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/geirsson/metaconfig-core_2.13/0.11.1/metaconfig-core_2.13-0.11.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/geirsson/metaconfig-typesafe-config_2.13/0.11.1/metaconfig-typesafe-config_2.13-0.11.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.8.10/parsers_2.13-4.8.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scalap/2.13.11/scalap-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/jawn-parser_3/1.4.0/jawn-parser_3-1.4.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/geirsson/metaconfig-pprint_2.13/0.11.1/metaconfig-pprint_2.13-0.11.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/paiges-core_2.13/0.4.2/paiges-core_2.13-0.4.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/trees_2.13/4.8.10/trees_2.13-4.8.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.11/scala-compiler-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.11/scala-compiler-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/common_2.13/4.8.10/common_2.13-4.8.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/java-diff-utils/java-diff-utils/4.12/java-diff-utils-4.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/jline/jline/3.22.0/jline-3.22.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/java-diff-utils/java-diff-utils/4.12/java-diff-utils-4.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/jline/jline/3.22.0/jline-3.22.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.10.0/semanticdb-javac-0.10.0.jar:/Users/sumitarora/.sbt/boot/scala-2.12.18/org.scala-sbt/sbt/1.9.7/test-agent-1.9.7.jar:/Users/sumitarora/.sbt/boot/scala-2.12.18/org.scala-sbt/sbt/1.9.7/test-interface-1.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-debug-adapter_2.12_1.0/4.2.0/sbt-debug-adapter_2.12_1.0-4.2.0.jar
+2024.08.03 16:04:13 INFO  Initialized Scala 3 decoder in 8 milliseconds
+2024.08.03 16:04:13 INFO  Trying to attach to remote debuggee VM localhost:52810 .
+2024.08.03 16:04:13 INFO  Attaching to debuggee VM succeeded.
+2024.08.03 16:04:17 INFO  Debuggee process terminated successfully.
+2024.08.03 16:04:18 INFO  Canceling debug proxy for [com.rockthejvm.reviewboard.services.CompanyServiceSpec()]
+2024.08.03 16:04:17 INFO  Closing debug server tcp://0.0.0.0:52806
+2024.08.03 16:04:39 INFO  Processing buildTarget/compile
+2024.08.03 16:04:44 INFO  Processing buildTarget/compile
+2024.08.03 16:04:44 INFO  compiling server
+2024.08.03 16:04:44 INFO  time: compiled server in 7ms
+2024.08.03 16:04:44 INFO  compiling server-test
+2024.08.03 16:04:44 INFO  compiling 1 Scala source to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.08.03 16:04:49 INFO  done compiling
+2024.08.03 16:04:49 INFO  time: compiled server-test in 4.36s
+2024.08.03 16:04:49 INFO  Processing buildTarget/scalaMainClasses
+2024.08.03 16:04:49 INFO  compiling server
+2024.08.03 16:04:49 INFO  time: compiled server in 22ms
+2024.08.03 16:04:49 INFO  compiling server-test
+2024.08.03 16:04:49 INFO  time: compiled server-test in 13ms
+2024.08.03 16:04:49 INFO  Processing buildTarget/scalaTestClasses
+2024.08.03 16:04:49 INFO  compiling server
+2024.08.03 16:04:49 INFO  time: compiled server in 18ms
+2024.08.03 16:04:49 INFO  compiling server-test
+2024.08.03 16:04:49 INFO  time: compiled server-test in 18ms
+2024.08.03 16:05:24 INFO  Processing buildTarget/compile
+2024.08.03 16:05:24 INFO  compiling server
+2024.08.03 16:05:24 INFO  time: compiled server in 18ms
+2024.08.03 16:05:24 INFO  compiling server-test
+2024.08.03 16:05:24 INFO  compiling 1 Scala source to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.08.03 16:05:24 ERROR -- [E006] Not Found Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:18:3 
+18 |   a = new CompanyRepository {
+   |   ^
+   |   Not found: a
+   |
+   | longer explanation available when compiling with `-explain`
+2024.08.03 16:05:24 ERROR one error found
+2024.08.03 16:05:24 INFO  time: compiled server-test in 0.73s
+2024.08.03 16:05:24 ERROR (server / Test / compileIncremental) Compilation failed
+2024.08.03 16:05:25 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (server / Test / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.08.03 16:05:24 INFO  Processing buildTarget/scalaMainClasses
+2024.08.03 16:05:25 INFO  compiling server
+2024.08.03 16:05:25 INFO  time: compiled server in 25ms
+2024.08.03 16:05:25 INFO  compiling server-test
+2024.08.03 16:05:25 INFO  compiling 1 Scala source to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.08.03 16:05:25 ERROR -- [E006] Not Found Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:18:3 
+18 |   a = new CompanyRepository {
+   |   ^
+   |   Not found: a
+   |
+   | longer explanation available when compiling with `-explain`
+2024.08.03 16:05:25 ERROR one error found
+2024.08.03 16:05:25 INFO  time: compiled server-test in 0.74s
+2024.08.03 16:05:25 ERROR (server / Test / compileIncremental) Compilation failed
+2024.08.03 16:05:26 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (server / Test / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.08.03 16:05:25 INFO  Processing buildTarget/scalaTestClasses
+2024.08.03 16:05:25 INFO  compiling server
+2024.08.03 16:05:25 INFO  time: compiled server in 21ms
+2024.08.03 16:05:25 INFO  compiling server-test
+2024.08.03 16:05:26 INFO  compiling 1 Scala source to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.08.03 16:05:26 ERROR -- [E006] Not Found Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:18:3 
+18 |   a = new CompanyRepository {
+   |   ^
+   |   Not found: a
+   |
+   | longer explanation available when compiling with `-explain`
+2024.08.03 16:05:26 ERROR one error found
+2024.08.03 16:05:26 INFO  time: compiled server-test in 0.78s
+2024.08.03 16:05:26 ERROR (server / Test / compileIncremental) Compilation failed
+2024.08.03 16:05:27 INFO  Scala test classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (server / Test / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.08.03 16:05:39 INFO  Processing buildTarget/compile
+2024.08.03 16:05:45 INFO  Processing buildTarget/compile
+2024.08.03 16:05:45 INFO  compiling server
+2024.08.03 16:05:45 INFO  time: compiled server in 20ms
+2024.08.03 16:05:45 INFO  compiling server-test
+2024.08.03 16:05:45 INFO  compiling 1 Scala source to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.08.03 16:05:45 ERROR -- [E006] Not Found Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:18:3 
+18 |   a = new CompanyRepository {
+   |   ^
+   |   Not found: a
+   |
+   | longer explanation available when compiling with `-explain`
+2024.08.03 16:05:45 ERROR one error found
+2024.08.03 16:05:45 INFO  time: compiled server-test in 0.73s
+2024.08.03 16:05:45 ERROR (server / Test / compileIncremental) Compilation failed
+2024.08.03 16:05:46 INFO  Cancelling compilation on sbt server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (server / Test / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.08.03 16:05:45 INFO  Processing buildTarget/scalaMainClasses
+2024.08.03 16:05:46 INFO  compiling server
+2024.08.03 16:05:46 INFO  time: compiled server in 22ms
+2024.08.03 16:05:46 INFO  compiling server-test
+2024.08.03 16:05:46 INFO  compiling 1 Scala source to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.08.03 16:05:46 ERROR -- [E006] Not Found Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:18:3 
+18 |   a = new CompanyRepository {
+   |   ^
+   |   Not found: a
+   |
+   | longer explanation available when compiling with `-explain`
+2024.08.03 16:05:46 ERROR one error found
+2024.08.03 16:05:46 INFO  time: compiled server-test in 0.69s
+2024.08.03 16:05:46 ERROR (server / Test / compileIncremental) Compilation failed
+2024.08.03 16:05:47 INFO  Scala main classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (server / Test / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.08.03 16:05:46 INFO  Processing buildTarget/scalaTestClasses
+2024.08.03 16:05:46 INFO  compiling server
+2024.08.03 16:05:46 INFO  time: compiled server in 18ms
+2024.08.03 16:05:46 INFO  compiling server-test
+2024.08.03 16:05:46 INFO  compiling 1 Scala source to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.08.03 16:05:47 ERROR -- [E006] Not Found Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:18:3 
+18 |   a = new CompanyRepository {
+   |   ^
+   |   Not found: a
+   |
+   | longer explanation available when compiling with `-explain`
+2024.08.03 16:05:47 ERROR one error found
+2024.08.03 16:05:47 INFO  time: compiled server-test in 0.59s
+2024.08.03 16:05:47 ERROR (server / Test / compileIncremental) Compilation failed
+2024.08.03 16:05:48 INFO  Scala test classes not supported by server
+org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (server / Test / compileIncremental) Compilation failed
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleResponse(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:204)
+	at scala.meta.internal.metals.RequestMonitorImpl$$anon$1.consume(ServerLivenessMonitor.scala:41)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:185)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:97)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:114)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.lang.Thread.run(Thread.java:833)
+
+2024.08.03 16:06:12 INFO  Processing buildTarget/compile
+2024.08.03 16:06:12 INFO  compiling server
+2024.08.03 16:06:12 INFO  time: compiled server in 19ms
+2024.08.03 16:06:12 INFO  compiling server-test
+2024.08.03 16:06:12 INFO  compiling 1 Scala source to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.08.03 16:06:15 INFO  done compiling
+2024.08.03 16:06:15 INFO  time: compiled server-test in 2.3s
+2024.08.03 16:06:15 INFO  Processing buildTarget/scalaMainClasses
+2024.08.03 16:06:15 INFO  compiling server
+2024.08.03 16:06:15 INFO  time: compiled server in 22ms
+2024.08.03 16:06:15 INFO  compiling server-test
+2024.08.03 16:06:15 INFO  time: compiled server-test in 14ms
+2024.08.03 16:06:15 INFO  Processing buildTarget/scalaTestClasses
+2024.08.03 16:06:15 INFO  compiling server
+2024.08.03 16:06:15 INFO  time: compiled server in 19ms
+2024.08.03 16:06:15 INFO  compiling server-test
+2024.08.03 16:06:15 INFO  time: compiled server-test in 12ms
+Aug 03, 2024 4:06:20 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 226
+2024.08.03 16:06:33 INFO  Processing buildTarget/compile
+2024.08.03 16:06:33 INFO  compiling server
+2024.08.03 16:06:33 INFO  time: compiled server in 21ms
+2024.08.03 16:06:33 INFO  compiling server-test
+2024.08.03 16:06:33 INFO  time: compiled server-test in 19ms
+2024.08.03 16:06:33 INFO  Processing buildTarget/scalaMainClasses
+2024.08.03 16:06:33 INFO  compiling server
+2024.08.03 16:06:33 INFO  time: compiled server in 88ms
+2024.08.03 16:06:33 INFO  compiling server-test
+2024.08.03 16:06:33 INFO  time: compiled server-test in 17ms
+2024.08.03 16:06:33 INFO  Processing buildTarget/scalaTestClasses
+2024.08.03 16:06:33 INFO  compiling server
+2024.08.03 16:06:33 INFO  time: compiled server in 20ms
+2024.08.03 16:06:33 INFO  compiling server-test
+2024.08.03 16:06:33 INFO  time: compiled server-test in 12ms
+2024.08.03 16:06:33 INFO  Processing debugSession/start
+2024.08.03 16:06:33 INFO  compiling server
+2024.08.03 16:06:33 INFO  time: compiled server in 24ms
+2024.08.03 16:06:34 INFO  compiling server-test
+2024.08.03 16:06:34 INFO  time: compiled server-test in 11ms
+2024.08.03 16:06:34 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/dap-server.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2024.08.03 16:06:34 INFO  Starting debuggee process:
+2024.08.03 16:06:34 INFO  - working directory:/Users/sumitarora/Desktop/zio-rite-of-passage/modules/server
+2024.08.03 16:06:34 INFO  - command: /Users/sumitarora/Library/Java/JavaVirtualMachines/jbr-17.0.8/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,quiet=n sbt.ForkMain 52957
+2024.08.03 16:06:34 INFO  - environment variables:
+  CLASSPATH=/Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/classes:/Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-sttp-client_3/1.2.6/tapir-sttp-client_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-json-zio_3/1.2.6/tapir-json-zio_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/client3/zio_3/3.8.8/zio_3-3.8.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-json_3/0.6.2/zio-json_3-0.6.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-zio_3/1.2.6/tapir-zio_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-zio-http-server_3/1.2.6/tapir-zio-http-server_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-swagger-ui-bundle_3/1.2.6/tapir-swagger-ui-bundle_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-sttp-stub-server_3/1.2.6/tapir-sttp-stub-server_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-logging_3/2.1.8/zio-logging_3-2.1.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-logging-slf4j_3/2.1.8/zio-logging-slf4j_3-2.1.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.4.4/logback-classic-1.4.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-test_3/2.0.19/zio-test_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-test-junit_3/2.0.19/zio-test-junit_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-test-sbt_3/2.0.19/zio-test-sbt_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-test-magnolia_3/2.0.19/zio-test-magnolia_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-mock_3/1.0.0-RC9/zio-mock_3-1.0.0-RC9.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-config_3/3.0.7/zio-config_3-3.0.7.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-config-magnolia_3/3.0.7/zio-config-magnolia_3-3.0.7.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-config-typesafe_3/3.0.7/zio-config-typesafe_3-3.0.7.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-jdbc-zio_3/4.7.3/quill-jdbc-zio_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/postgresql/postgresql/42.5.0/postgresql-42.5.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/flywaydb/flyway-core/9.7.0/flyway-core-9.7.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/scottweaver/zio-2-0-testcontainers-postgresql_3/0.9.0/zio-2-0-testcontainers-postgresql_3-0.9.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-prelude_3/1.0.0-RC16/zio-prelude_3-1.0.0-RC16.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/auth0/java-jwt/4.2.1/java-jwt-4.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/stripe/stripe-java/24.3.0/stripe-java-24.3.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.11/scala-library-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-client_3/1.2.6/tapir-client_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/client3/core_3/3.8.8/core_3-3.8.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-core_3/1.2.6/tapir-core_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-streams_3/2.0.19/zio-streams_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio_3/2.0.19/zio_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/shared/zio_3/1.3.12/zio_3-1.3.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-interop-reactivestreams_3/2.0.0/zio-interop-reactivestreams_3-2.0.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_3/2.11.0/scala-collection-compat_3-2.11.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/magnolia1_3/magnolia_3/1.3.3/magnolia_3-1.3.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-server_3/1.2.6/tapir-server_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-http_3/0.0.3/zio-http_3-0.0.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-swagger-ui_3/1.2.6/tapir-swagger-ui_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-openapi-docs_3/1.2.6/tapir-openapi-docs_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/openapi-circe-yaml_3/0.3.2/openapi-circe-yaml_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.1/slf4j-api-2.0.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-core/1.4.4/logback-core-1.4.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/portable-scala/portable-scala-reflect_2.13/1.1.2/portable-scala-reflect_2.13-1.1.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-config-derivation_3/3.0.7/zio-config-derivation_3-3.0.7.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.4.2/config-1.4.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-zio_3/4.7.3/quill-zio_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-sql_3/4.7.3/quill-sql_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-jdbc_3/4.7.3/quill-jdbc_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_3/1.0.2/scala-java8-compat_3-1.0.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/zaxxer/HikariCP/4.0.3/HikariCP-4.0.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.13.4/jackson-dataformat-toml-2.13.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/scottweaver/zio-testcontainers-models_3/0.9.0/zio-testcontainers-models_3-0.9.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/scottweaver/zillen_3/0.9.0/zillen_3-0.9.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/dimafeng/testcontainers-scala-core_3/0.40.10/testcontainers-scala-core_3-0.40.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/dimafeng/testcontainers-scala-postgresql_3/0.40.10/testcontainers-scala-postgresql_3-0.40.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-prelude-macros_3/1.0.0-RC16/zio-prelude-macros_3-1.0.0-RC16.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.13.4.2/jackson-databind-2.13.4.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/javax/activation/activation/1.1/activation-1.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/model/core_3/1.5.4/core_3-1.5.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/shared/core_3/1.3.12/core_3-1.3.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/shared/ws_3/1.3.12/ws_3-1.3.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-internal-macros_3/2.0.19/zio-internal-macros_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-stacktracer_3/2.0.19/zio-stacktracer_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/izumi-reflect_3/2.3.8/izumi-reflect_3-2.3.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-http-logging_3/0.0.3/zio-http-logging_3-0.0.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.82.Final/netty-codec-http-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.82.Final/netty-handler-proxy-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final-linux-x86_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final-linux-aarch_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-kqueue/4.1.82.Final/netty-transport-native-kqueue-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-kqueue/4.1.82.Final/netty-transport-native-kqueue-4.1.82.Final-osx-x86_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-kqueue/4.1.82.Final/netty-transport-native-kqueue-4.1.82.Final-osx-aarch_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-schema_3/0.2.1/zio-schema_3-0.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-schema-json_3/0.2.1/zio-schema-json_3-0.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/incubator/netty-incubator-transport-native-io_uring/0.0.15.Final/netty-incubator-transport-native-io_uring-0.0.15.Final-linux-x86_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/webjars/swagger-ui/4.15.5/swagger-ui-4.15.5.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-apispec-docs_3/1.2.6/tapir-apispec-docs_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/quicklens/quicklens_3/1.9.0/quicklens_3-1.9.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/openapi-model_3/0.3.2/openapi-model_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/openapi-circe_3/0.3.2/openapi-circe_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-yaml_3/0.14.2/circe-yaml_3-0.14.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/suzaku/boopickle_3/1.4.0/boopickle_3-1.4.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/pprint_3/0.8.1/pprint_3-0.8.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-engine_3/4.7.3/quill-engine_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-util_3/4.7.3/quill-util_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/typesafe/scala-logging/scala-logging_3/3.9.5/scala-logging_3-3.9.5.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.13.4/jackson-core-2.13.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-handler/4.1.82.Final/netty-handler-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/testcontainers/testcontainers/1.17.3/testcontainers-1.17.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/dimafeng/testcontainers-scala-jdbc_3/0.40.10/testcontainers-scala-jdbc_3-0.40.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/testcontainers/postgresql/1.17.3/postgresql-1.17.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.13.4/jackson-annotations-2.13.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/izumi-reflect-thirdparty-boopickle-shaded_3/2.3.8/izumi-reflect-thirdparty-boopickle-shaded_3-2.3.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-common/4.1.82.Final/netty-common-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-buffer/4.1.82.Final/netty-buffer-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport/4.1.82.Final/netty-transport-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-codec/4.1.82.Final/netty-codec-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.82.Final/netty-codec-socks-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-unix-common/4.1.82.Final/netty-transport-native-unix-common-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-classes-epoll/4.1.82.Final/netty-transport-classes-epoll-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-classes-kqueue/4.1.82.Final/netty-transport-classes-kqueue-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-schema-macros_3/0.2.1/zio-schema-macros_3-0.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-schema-derivation_3/0.2.1/zio-schema-derivation_3-0.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/incubator/netty-incubator-transport-classes-io_uring/0.0.15.Final/netty-incubator-transport-classes-io_uring-0.0.15.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/asyncapi-model_3/0.3.2/asyncapi-model_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/apispec-model_3/0.3.2/apispec-model_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/jsonschema-circe_3/0.3.2/jsonschema-circe_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-core_3/0.14.3/circe-core_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/fansi_3/0.4.0/fansi_3-0.4.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/sourcecode_3/0.3.0/sourcecode_3-0.3.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/takayahilton/sql-formatter_2.13/1.2.1/sql-formatter_2.13-1.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.7.14/scalafmt-core_2.13-3.7.14.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parallel-collections_3/1.0.4/scala-parallel-collections_3-1.0.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-resolver/4.1.82.Final/netty-resolver-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/docker-java/docker-java-api/3.2.13/docker-java-api-3.2.13.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/docker-java/docker-java-transport-zerodep/3.2.13/docker-java-transport-zerodep-3.2.13.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/testcontainers/jdbc/1.17.3/jdbc-1.17.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-parser_3/0.14.3/circe-parser_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-generic_3/0.14.3/circe-generic_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-numbers_3/0.14.3/circe-numbers_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_3/2.8.0/cats-core_3-2.8.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.7.14/scalafmt-sysops_2.13-3.7.14.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.7.14/scalafmt-config_2.13-3.7.14.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.8.10/scalameta_2.13-4.8.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.11/scala-reflect-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/docker-java/docker-java-transport/3.2.13/docker-java-transport-3.2.13.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/testcontainers/database-commons/1.17.3/database-commons-1.17.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-jawn_3/0.14.3/circe-jawn_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_3/2.8.0/cats-kernel_3-2.8.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/geirsson/metaconfig-core_2.13/0.11.1/metaconfig-core_2.13-0.11.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/geirsson/metaconfig-typesafe-config_2.13/0.11.1/metaconfig-typesafe-config_2.13-0.11.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.8.10/parsers_2.13-4.8.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scalap/2.13.11/scalap-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/jawn-parser_3/1.4.0/jawn-parser_3-1.4.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/geirsson/metaconfig-pprint_2.13/0.11.1/metaconfig-pprint_2.13-0.11.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/paiges-core_2.13/0.4.2/paiges-core_2.13-0.4.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/trees_2.13/4.8.10/trees_2.13-4.8.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.11/scala-compiler-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.11/scala-compiler-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/common_2.13/4.8.10/common_2.13-4.8.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/java-diff-utils/java-diff-utils/4.12/java-diff-utils-4.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/jline/jline/3.22.0/jline-3.22.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/java-diff-utils/java-diff-utils/4.12/java-diff-utils-4.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/jline/jline/3.22.0/jline-3.22.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.10.0/semanticdb-javac-0.10.0.jar:/Users/sumitarora/.sbt/boot/scala-2.12.18/org.scala-sbt/sbt/1.9.7/test-agent-1.9.7.jar:/Users/sumitarora/.sbt/boot/scala-2.12.18/org.scala-sbt/sbt/1.9.7/test-interface-1.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-debug-adapter_2.12_1.0/4.2.0/sbt-debug-adapter_2.12_1.0-4.2.0.jar
+2024.08.03 16:06:34 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/dap-client.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2024.08.03 16:06:34 INFO  Starting debug proxy for [com.rockthejvm.reviewboard.services.CompanyServiceSpec()]
+2024.08.03 16:06:34 INFO  Initialized Scala 3 decoder in 0 milliseconds
+2024.08.03 16:06:34 INFO  Trying to attach to remote debuggee VM localhost:52959 .
+2024.08.03 16:06:34 INFO  Attaching to debuggee VM succeeded.
+2024.08.03 16:06:39 INFO  Processing buildTarget/compile
+2024.08.03 16:06:39 INFO  Debuggee process terminated successfully.
+2024.08.03 16:06:39 INFO  Canceling debug proxy for [com.rockthejvm.reviewboard.services.CompanyServiceSpec()]
+2024.08.03 16:06:39 INFO  Closing debug server tcp://0.0.0.0:52955
+2024.08.03 16:07:03 INFO  Processing buildTarget/compile
+2024.08.03 16:07:03 INFO  compiling server
+2024.08.03 16:07:03 INFO  time: compiled server in 21ms
+2024.08.03 16:07:03 INFO  compiling server-test
+2024.08.03 16:07:03 INFO  time: compiled server-test in 16ms
+2024.08.03 16:07:03 INFO  Processing buildTarget/scalaMainClasses
+2024.08.03 16:07:03 INFO  compiling server
+2024.08.03 16:07:03 INFO  time: compiled server in 23ms
+2024.08.03 16:07:03 INFO  compiling server-test
+2024.08.03 16:07:03 INFO  time: compiled server-test in 17ms
+2024.08.03 16:07:03 INFO  Processing buildTarget/scalaTestClasses
+2024.08.03 16:07:03 INFO  compiling server
+2024.08.03 16:07:03 INFO  time: compiled server in 16ms
+2024.08.03 16:07:03 INFO  compiling server-test
+2024.08.03 16:07:03 INFO  time: compiled server-test in 14ms
+2024.08.03 16:07:03 INFO  Processing debugSession/start
+2024.08.03 16:07:03 INFO  compiling server
+2024.08.03 16:07:03 INFO  time: compiled server in 17ms
+2024.08.03 16:07:03 INFO  compiling server-test
+2024.08.03 16:07:03 INFO  time: compiled server-test in 15ms
+2024.08.03 16:07:04 INFO  tracing is disabled for protocol dap-server, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/dap-server.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/dap-server.trace.json
+2024.08.03 16:07:03 INFO  Starting debuggee process:
+2024.08.03 16:07:03 INFO  - working directory:/Users/sumitarora/Desktop/zio-rite-of-passage/modules/server
+2024.08.03 16:07:03 INFO  - command: /Users/sumitarora/Library/Java/JavaVirtualMachines/jbr-17.0.8/Contents/Home/bin/java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,quiet=n sbt.ForkMain 52993
+2024.08.03 16:07:03 INFO  - environment variables:
+  CLASSPATH=/Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/classes:/Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-sttp-client_3/1.2.6/tapir-sttp-client_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-json-zio_3/1.2.6/tapir-json-zio_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/client3/zio_3/3.8.8/zio_3-3.8.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-json_3/0.6.2/zio-json_3-0.6.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-zio_3/1.2.6/tapir-zio_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-zio-http-server_3/1.2.6/tapir-zio-http-server_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-swagger-ui-bundle_3/1.2.6/tapir-swagger-ui-bundle_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-sttp-stub-server_3/1.2.6/tapir-sttp-stub-server_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-logging_3/2.1.8/zio-logging_3-2.1.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-logging-slf4j_3/2.1.8/zio-logging-slf4j_3-2.1.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.4.4/logback-classic-1.4.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-test_3/2.0.19/zio-test_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-test-junit_3/2.0.19/zio-test-junit_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-test-sbt_3/2.0.19/zio-test-sbt_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-test-magnolia_3/2.0.19/zio-test-magnolia_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-mock_3/1.0.0-RC9/zio-mock_3-1.0.0-RC9.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-config_3/3.0.7/zio-config_3-3.0.7.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-config-magnolia_3/3.0.7/zio-config-magnolia_3-3.0.7.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-config-typesafe_3/3.0.7/zio-config-typesafe_3-3.0.7.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-jdbc-zio_3/4.7.3/quill-jdbc-zio_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/postgresql/postgresql/42.5.0/postgresql-42.5.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/flywaydb/flyway-core/9.7.0/flyway-core-9.7.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/scottweaver/zio-2-0-testcontainers-postgresql_3/0.9.0/zio-2-0-testcontainers-postgresql_3-0.9.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-prelude_3/1.0.0-RC16/zio-prelude_3-1.0.0-RC16.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/auth0/java-jwt/4.2.1/java-jwt-4.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/sun/mail/javax.mail/1.6.2/javax.mail-1.6.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/stripe/stripe-java/24.3.0/stripe-java-24.3.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.11/scala-library-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-client_3/1.2.6/tapir-client_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/client3/core_3/3.8.8/core_3-3.8.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-core_3/1.2.6/tapir-core_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-streams_3/2.0.19/zio-streams_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio_3/2.0.19/zio_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/shared/zio_3/1.3.12/zio_3-1.3.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-interop-reactivestreams_3/2.0.0/zio-interop-reactivestreams_3-2.0.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-collection-compat_3/2.11.0/scala-collection-compat_3-2.11.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/magnolia1_3/magnolia_3/1.3.3/magnolia_3-1.3.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-server_3/1.2.6/tapir-server_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-http_3/0.0.3/zio-http_3-0.0.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-swagger-ui_3/1.2.6/tapir-swagger-ui_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-openapi-docs_3/1.2.6/tapir-openapi-docs_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/openapi-circe-yaml_3/0.3.2/openapi-circe-yaml_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/slf4j/slf4j-api/2.0.1/slf4j-api-2.0.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/ch/qos/logback/logback-core/1.4.4/logback-core-1.4.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/portable-scala/portable-scala-reflect_2.13/1.1.2/portable-scala-reflect_2.13-1.1.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-config-derivation_3/3.0.7/zio-config-derivation_3-3.0.7.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.4.2/config-1.4.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-zio_3/4.7.3/quill-zio_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-sql_3/4.7.3/quill-sql_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-jdbc_3/4.7.3/quill-jdbc_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_3/1.0.2/scala-java8-compat_3-1.0.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/zaxxer/HikariCP/4.0.3/HikariCP-4.0.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.13.4/jackson-dataformat-toml-2.13.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/scottweaver/zio-testcontainers-models_3/0.9.0/zio-testcontainers-models_3-0.9.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/scottweaver/zillen_3/0.9.0/zillen_3-0.9.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/dimafeng/testcontainers-scala-core_3/0.40.10/testcontainers-scala-core_3-0.40.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/dimafeng/testcontainers-scala-postgresql_3/0.40.10/testcontainers-scala-postgresql_3-0.40.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-prelude-macros_3/1.0.0-RC16/zio-prelude-macros_3-1.0.0-RC16.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.13.4.2/jackson-databind-2.13.4.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/javax/activation/activation/1.1/activation-1.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/model/core_3/1.5.4/core_3-1.5.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/shared/core_3/1.3.12/core_3-1.3.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/shared/ws_3/1.3.12/ws_3-1.3.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-internal-macros_3/2.0.19/zio-internal-macros_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-stacktracer_3/2.0.19/zio-stacktracer_3-2.0.19.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/izumi-reflect_3/2.3.8/izumi-reflect_3-2.3.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-http-logging_3/0.0.3/zio-http-logging_3-0.0.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-codec-http/4.1.82.Final/netty-codec-http-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-handler-proxy/4.1.82.Final/netty-handler-proxy-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final-linux-x86_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-epoll/4.1.82.Final/netty-transport-native-epoll-4.1.82.Final-linux-aarch_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-kqueue/4.1.82.Final/netty-transport-native-kqueue-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-kqueue/4.1.82.Final/netty-transport-native-kqueue-4.1.82.Final-osx-x86_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-kqueue/4.1.82.Final/netty-transport-native-kqueue-4.1.82.Final-osx-aarch_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-schema_3/0.2.1/zio-schema_3-0.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-schema-json_3/0.2.1/zio-schema-json_3-0.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/incubator/netty-incubator-transport-native-io_uring/0.0.15.Final/netty-incubator-transport-native-io_uring-0.0.15.Final-linux-x86_64.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/webjars/swagger-ui/4.15.5/swagger-ui-4.15.5.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/tapir/tapir-apispec-docs_3/1.2.6/tapir-apispec-docs_3-1.2.6.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/quicklens/quicklens_3/1.9.0/quicklens_3-1.9.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/openapi-model_3/0.3.2/openapi-model_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/openapi-circe_3/0.3.2/openapi-circe_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-yaml_3/0.14.2/circe-yaml_3-0.14.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/suzaku/boopickle_3/1.4.0/boopickle_3-1.4.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/pprint_3/0.8.1/pprint_3-0.8.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-engine_3/4.7.3/quill-engine_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/getquill/quill-util_3/4.7.3/quill-util_3-4.7.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/typesafe/scala-logging/scala-logging_3/3.9.5/scala-logging_3-3.9.5.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.13.4/jackson-core-2.13.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-handler/4.1.82.Final/netty-handler-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/testcontainers/testcontainers/1.17.3/testcontainers-1.17.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/dimafeng/testcontainers-scala-jdbc_3/0.40.10/testcontainers-scala-jdbc_3-0.40.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/testcontainers/postgresql/1.17.3/postgresql-1.17.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.13.4/jackson-annotations-2.13.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/izumi-reflect-thirdparty-boopickle-shaded_3/2.3.8/izumi-reflect-thirdparty-boopickle-shaded_3-2.3.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-common/4.1.82.Final/netty-common-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-buffer/4.1.82.Final/netty-buffer-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport/4.1.82.Final/netty-transport-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-codec/4.1.82.Final/netty-codec-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-codec-socks/4.1.82.Final/netty-codec-socks-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-native-unix-common/4.1.82.Final/netty-transport-native-unix-common-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-classes-epoll/4.1.82.Final/netty-transport-classes-epoll-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-transport-classes-kqueue/4.1.82.Final/netty-transport-classes-kqueue-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-schema-macros_3/0.2.1/zio-schema-macros_3-0.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/dev/zio/zio-schema-derivation_3/0.2.1/zio-schema-derivation_3-0.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/incubator/netty-incubator-transport-classes-io_uring/0.0.15.Final/netty-incubator-transport-classes-io_uring-0.0.15.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/asyncapi-model_3/0.3.2/asyncapi-model_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/apispec-model_3/0.3.2/apispec-model_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/softwaremill/sttp/apispec/jsonschema-circe_3/0.3.2/jsonschema-circe_3-0.3.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-core_3/0.14.3/circe-core_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/fansi_3/0.4.0/fansi_3-0.4.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/lihaoyi/sourcecode_3/0.3.0/sourcecode_3-0.3.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/takayahilton/sql-formatter_2.13/1.2.1/sql-formatter_2.13-1.2.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/scalafmt-core_2.13/3.7.14/scalafmt-core_2.13-3.7.14.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-parallel-collections_3/1.0.4/scala-parallel-collections_3-1.0.4.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/netty/netty-resolver/4.1.82.Final/netty-resolver-4.1.82.Final.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/docker-java/docker-java-api/3.2.13/docker-java-api-3.2.13.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/docker-java/docker-java-transport-zerodep/3.2.13/docker-java-transport-zerodep-3.2.13.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/testcontainers/jdbc/1.17.3/jdbc-1.17.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-parser_3/0.14.3/circe-parser_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-generic_3/0.14.3/circe-generic_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-numbers_3/0.14.3/circe-numbers_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-core_3/2.8.0/cats-core_3-2.8.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/scalafmt-sysops_2.13/3.7.14/scalafmt-sysops_2.13-3.7.14.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/scalafmt-config_2.13/3.7.14/scalafmt-config_2.13-3.7.14.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/scalameta_2.13/4.8.10/scalameta_2.13-4.8.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.11/scala-reflect-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/github/docker-java/docker-java-transport/3.2.13/docker-java-transport-3.2.13.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.13.0/jna-5.13.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/testcontainers/database-commons/1.17.3/database-commons-1.17.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/circe/circe-jawn_3/0.14.3/circe-jawn_3-0.14.3.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/cats-kernel_3/2.8.0/cats-kernel_3-2.8.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/geirsson/metaconfig-core_2.13/0.11.1/metaconfig-core_2.13-0.11.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/geirsson/metaconfig-typesafe-config_2.13/0.11.1/metaconfig-typesafe-config_2.13-0.11.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/parsers_2.13/4.8.10/parsers_2.13-4.8.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scalap/2.13.11/scalap-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/jawn-parser_3/1.4.0/jawn-parser_3-1.4.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/geirsson/metaconfig-pprint_2.13/0.11.1/metaconfig-pprint_2.13-0.11.1.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/typelevel/paiges-core_2.13/0.4.2/paiges-core_2.13-0.4.2.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/trees_2.13/4.8.10/trees_2.13-4.8.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.11/scala-compiler-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.11/scala-compiler-2.13.11.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scalameta/common_2.13/4.8.10/common_2.13-4.8.10.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/java-diff-utils/java-diff-utils/4.12/java-diff-utils-4.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/jline/jline/3.22.0/jline-3.22.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/io/github/java-diff-utils/java-diff-utils/4.12/java-diff-utils-4.12.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/jline/jline/3.22.0/jline-3.22.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/sourcegraph/semanticdb-javac/0.10.0/semanticdb-javac-0.10.0.jar:/Users/sumitarora/.sbt/boot/scala-2.12.18/org.scala-sbt/sbt/1.9.7/test-agent-1.9.7.jar:/Users/sumitarora/.sbt/boot/scala-2.12.18/org.scala-sbt/sbt/1.9.7/test-interface-1.0.jar:/Users/sumitarora/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/ch/epfl/scala/sbt-debug-adapter_2.12_1.0/4.2.0/sbt-debug-adapter_2.12_1.0-4.2.0.jar
+2024.08.03 16:07:04 INFO  tracing is disabled for protocol dap-client, to enable tracing of incoming and outgoing JSON messages create an empty file at /Users/sumitarora/Desktop/zio-rite-of-passage/.metals/dap-client.trace.json or /Users/sumitarora/Library/Caches/org.scalameta.metals/dap-client.trace.json
+2024.08.03 16:07:04 INFO  Starting debug proxy for [com.rockthejvm.reviewboard.services.CompanyServiceSpec()]
+2024.08.03 16:07:04 INFO  Initialized Scala 3 decoder in 0 milliseconds
+2024.08.03 16:07:04 INFO  Trying to attach to remote debuggee VM localhost:52995 .
+2024.08.03 16:07:04 INFO  Attaching to debuggee VM succeeded.
+2024.08.03 16:07:08 INFO  Debuggee process terminated successfully.
+2024.08.03 16:07:08 INFO  Canceling debug proxy for [com.rockthejvm.reviewboard.services.CompanyServiceSpec()]
+2024.08.03 16:07:08 INFO  Closing debug server tcp://0.0.0.0:52991
+2024.08.03 16:07:39 INFO  Processing buildTarget/compile
+2024.08.03 16:07:51 INFO  Processing buildTarget/compile
+2024.08.03 16:07:51 INFO  compiling server
+2024.08.03 16:07:51 INFO  time: compiled server in 18ms
+2024.08.03 16:07:51 INFO  compiling server-test
+2024.08.03 16:07:51 INFO  compiling 1 Scala source to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.08.03 16:07:53 INFO  done compiling
+2024.08.03 16:07:53 INFO  time: compiled server-test in 1.99s
+2024.08.03 16:07:53 INFO  Processing buildTarget/scalaMainClasses
+2024.08.03 16:07:53 INFO  compiling server
+2024.08.03 16:07:53 INFO  time: compiled server in 17ms
+2024.08.03 16:07:53 INFO  compiling server-test
+2024.08.03 16:07:53 INFO  time: compiled server-test in 18ms
+2024.08.03 16:07:53 INFO  Processing buildTarget/scalaTestClasses
+2024.08.03 16:07:53 INFO  compiling server
+2024.08.03 16:07:53 INFO  time: compiled server in 19ms
+2024.08.03 16:07:53 INFO  compiling server-test
+2024.08.03 16:07:53 INFO  time: compiled server-test in 13ms
+2024.08.03 16:08:02 INFO  Processing buildTarget/compile
+2024.08.03 16:08:02 INFO  compiling server
+2024.08.03 16:08:02 INFO  time: compiled server in 19ms
+2024.08.03 16:08:02 INFO  compiling server-test
+2024.08.03 16:08:02 INFO  compiling 1 Scala source to /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes ...
+2024.08.03 16:08:04 INFO  done compiling
+2024.08.03 16:08:04 INFO  time: compiled server-test in 1.93s
+2024.08.03 16:08:04 INFO  Processing buildTarget/scalaTestClasses
+2024.08.03 16:08:04 INFO  compiling server
+2024.08.03 16:08:04 INFO  time: compiled server in 18ms
+2024.08.03 16:08:04 INFO  compiling server-test
+2024.08.03 16:08:04 INFO  time: compiled server-test in 14ms
+2024.08.03 16:08:04 INFO  Processing buildTarget/scalaMainClasses
+2024.08.03 16:08:04 INFO  compiling server
+2024.08.03 16:08:04 INFO  time: compiled server in 15ms
+2024.08.03 16:08:04 INFO  compiling server-test
+2024.08.03 16:08:04 INFO  time: compiled server-test in 12ms
+2024.08.03 16:08:39 INFO  Processing buildTarget/compile

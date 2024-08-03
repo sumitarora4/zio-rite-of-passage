@@ -1,28 +1,12 @@
 {
   "results": [
     {
-       "name" : "test_case_-621538246/Company Controller Test/post company",
+       "name" : "test_case_397546382/CompanyServiceSpec/Create",
        "status" : "Success",
-       "durationMillis" : "1106",
+       "durationMillis" : "336",
        "annotations" : "",
-       "fullyQualifiedClassName" : "test_case_-621538246",
-       "labels" : ["Company Controller Test", "post company"]
-    },
-    {
-       "name" : "test_case_-621538246/Company Controller Test/get All",
-       "status" : "Success",
-       "durationMillis" : "1141",
-       "annotations" : "",
-       "fullyQualifiedClassName" : "test_case_-621538246",
-       "labels" : ["Company Controller Test", "get All"]
-    },
-    {
-       "name" : "test_case_-621538246/Company Controller Test/get by id",
-       "status" : "Success",
-       "durationMillis" : "1165",
-       "annotations" : "",
-       "fullyQualifiedClassName" : "test_case_-621538246",
-       "labels" : ["Company Controller Test", "get by id"]
+       "fullyQualifiedClassName" : "test_case_397546382",
+       "labels" : ["CompanyServiceSpec", "Create"]
     }
 
   ]

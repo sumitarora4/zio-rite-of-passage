@@ -179,7 +179,7 @@ modules/app/.DS_Store
 modules/app/.parcel-cache
 modules/app/node_modules
 modules/app/dist
-modules/server/target/*
+modules/server/target/
 ### Bloop
 .bloop/
 

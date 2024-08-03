@@ -1,25 +1,7 @@
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:89:10 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m89 |[0m          response <- basicRequest[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m          ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m          Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:90:10 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m90 |[0m          .get([31muri"/companies"[0m)[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m          ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m          Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:91:10 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m91 |[0m          .send(backendStub)[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m          ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m          Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:106:10 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m106 |[0m          response <- basicRequest[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m    |[0m          ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m          Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:107:10 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m107 |[0m          .get([31muri"/companies/1"[0m)[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m    |[0m          ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m          Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Warning: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/http/controllers/CompanyControllerSpec.scala:108:10 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m108 |[0m          .send(backendStub)[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m    |[0m          ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m    |[0m          Line is indented too far to the left, or a `}` is missing[0m
-[0m[[0m[33mwarn[0m] [0m[0m6 warnings found[0m
+[error] -- [E006] Not Found Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/services/CompanyServiceSpec.scala:18:3 
+[error] 18 |   a = new CompanyRepository {
+[error]    |   ^
+[error]    |   Not found: a
+[error]    |
+[error]    | longer explanation available when compiling with `-explain`
+[error] one error found

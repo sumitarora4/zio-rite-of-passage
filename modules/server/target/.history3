@@ -13,3 +13,6 @@
 1720335798397:Test/compile
 1720336378621:test
 1721477416977:compile
+1722669883243:test
+1722670132101:testOnly com.rockthejvm.reviewboard.http.controllers.CompanyServiceSpec
+1722670297218:test
