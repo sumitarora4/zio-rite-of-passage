@@ -17,7 +17,7 @@ final case class CreateCompanyRequest(
 ) {
   def toCompany(id: Long) = {
     Company(
-      id,
+      -1L, // db will allocate this
       Company.makeSlug(name),
       name,
       url,

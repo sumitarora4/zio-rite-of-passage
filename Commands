@@ -18,7 +18,7 @@ Run Test
 sbt
 project server
 test
-testOnly <full path of the test file>
+testOnly <full path of the test file including package>
 
 
 Docker Commands

@@ -22,5 +22,5 @@ object Company {
     .replaceAll(" +", " ")
     .split(" ")
     .map(_.toLowerCase())
-    .mkString("_") // "My Company  Inc" -> "my-company-inc"
+    .mkString("-") // "My Company  Inc" -> "my-company-inc"
 }

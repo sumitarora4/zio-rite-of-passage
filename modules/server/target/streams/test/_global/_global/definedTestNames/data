@@ -1,1 +1,1 @@
-["com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec","com.rockthejvm.reviewboard.services.CompanyServiceSpec"]
+["com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec","com.rockthejvm.reviewboard.services.CompanyServiceSpec","com.rockthejvm.reviewboard.repositories.CompnayRepositorySpec"]

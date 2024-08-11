@@ -1,12 +1,20 @@
 {
   "results": [
     {
-       "name" : "test_case_397546382/CompanyServiceSpec/Create",
-       "status" : "Success",
-       "durationMillis" : "336",
+       "name" : "test_case_1164908791/CompanyServiceSpec/Create",
+       "status" : "Failure",
+       "durationMillis" : "1",
        "annotations" : "",
-       "fullyQualifiedClassName" : "test_case_397546382",
+       "fullyQualifiedClassName" : "test_case_1164908791",
        "labels" : ["CompanyServiceSpec", "Create"]
+    },
+    {
+       "name" : "test_case_1164908791/CompanyServiceSpec/get by id",
+       "status" : "Failure",
+       "durationMillis" : "1",
+       "annotations" : "",
+       "fullyQualifiedClassName" : "test_case_1164908791",
+       "labels" : ["CompanyServiceSpec", "get by id"]
     }
 
   ]

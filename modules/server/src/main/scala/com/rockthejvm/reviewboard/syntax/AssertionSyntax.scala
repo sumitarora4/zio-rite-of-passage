@@ -8,4 +8,4 @@ extension [R, E, A](zio: ZIO[R, E, A])
     assertZIO(zio)(assertion)
 
   def assert(perdicate: (=> A) => Boolean): ZIO[R, E, TestResult] =
-    assert(Assertion.assertion("test assertion")(perdicate))
+    assert(Assertion.assertion("test assertion")(perdicate))  

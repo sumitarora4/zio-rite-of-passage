@@ -1,2 +1,2 @@
-[debug] Subclass fingerprints: List((zio.test.ZIOSpecAbstract,true,zio.test.sbt.ZioSpecFingerprint$@23ce70a2))
-[debug] Annotation fingerprints: List()
+[0m[[0m[0mdebug[0m] [0m[0mSubclass fingerprints: List((zio.test.ZIOSpecAbstract,true,zio.test.sbt.ZioSpecFingerprint$@22f8448b))[0m
+[0m[[0m[0mdebug[0m] [0m[0mAnnotation fingerprints: List()[0m

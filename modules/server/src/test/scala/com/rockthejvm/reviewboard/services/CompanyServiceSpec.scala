@@ -10,6 +10,7 @@ import com.rockthejvm.reviewboard.syntax.*
 import scala.collection.immutable.List
 
 import scala.collection.mutable.Map
+import com.rockthejvm.reviewboard.repositories.CompanyRepositoryDemo.program
 
 object CompanyServiceSpec extends ZIOSpecDefault{
 
@@ -44,7 +45,8 @@ object CompanyServiceSpec extends ZIOSpecDefault{
        }
      }
 
-     override def getById(id: Long): Task[Option[Company]] = ZIO.succeed(db.get(id))
+     override def getById(id: Long): Task[Option[Company]] = 
+      ZIO.succeed(db.get(id))
 
      override def getBySlug(slug: String): Task[Option[Company]] = {
        ZIO.succeed(db.values.find(_.slug == slug))
@@ -57,15 +59,39 @@ object CompanyServiceSpec extends ZIOSpecDefault{
  )
 
   override def spec: Spec[TestEnvironment with Scope, Any] = {
-    suite("CompanyServiceSpec"){
+    suite("CompanyServiceSpec")(
       test("Create"){
-        val companyZio = service(_.create(CreateCompanyRequest(1L,"", "Rock the JVM", "rockthejvm.com")))
+        val companyZio = service(_.create(CreateCompanyRequest(1L,"rock_the_jvm", "Rock the JVM", "rockthejvm.com")))
         companyZio.assert { company =>
           company.name == "Rock the JVM" &&
             company.url == "rockthejvm.com" &&
             company.slug == "rock_the_jvm"
         }
+      },
+      test("get by id") {
+        // create a company 
+        // fetch a company by id
+        val program = for {
+          company <- service(_.create(CreateCompanyRequest(1L,"rock_the_jvm", "Rock the JVM", "rockthejvm.com")))
+          companyOpt <- service(_.getById(company.id))
+        } yield(company, companyOpt.get)
+
+        program.assert {
+          case (company, companyRes) =>
+            company.name == "Rock the JVM" &&
+            company.url == "rockthejvm" &&
+            company.slug == "rock_the_jvm" &&
+            company == companyRes
+
+          case _ => false
+
+        }
       }
-    }.provide(CompanyServiceLive.layer, stubRepoLayer)
+            ).provide(CompanyServiceLive.layer, stubRepoLayer)
+
+
+
+
+    
   }
 }

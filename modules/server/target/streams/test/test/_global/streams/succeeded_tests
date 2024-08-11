@@ -1,4 +1,3 @@
 #Successful Tests
-#Sat Aug 03 15:32:03 SGT 2024
-com.rockthejvm.reviewboard.services.CompanyServiceSpec=1722670322945
-com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec=1722670323510
+#Sun Aug 04 13:51:30 SGT 2024
+com.rockthejvm.reviewboard.http.controllers.CompanyControllerSpec=1722750690374

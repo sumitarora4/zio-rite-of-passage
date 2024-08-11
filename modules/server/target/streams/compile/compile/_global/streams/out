@@ -1,7 +1,7 @@
 [info] -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:27:8 
 [info] 27 |    run {
 [info]    |    ^
-[info]    |Quill Query (compiled in 384ms): INSERT INTO companies (slug,name,url,country,location,industry,image,tag) VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING id, slug, name, url, country, location, industry, image, tag
+[info]    |Quill Query (compiled in 827ms): INSERT INTO companies (slug,name,url,country,location,industry,image,tag) VALUES (?, ?, ?, ?, ?, ?, ?, ?) RETURNING id, slug, name, url, country, location, industry, image, tag
 [info] 28 |      query[Company]
 [info] 29 |        .insertValue(lift(company))
 [info] 30 |        .returning(r => r)
@@ -9,7 +9,7 @@
 [info] -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:35:21 
 [info] 35 |      updated <- run {
 [info]    |                 ^
-[info]    |Quill Query (compiled in 98ms): UPDATE companies AS x3 SET slug = ?, name = ?, url = ?, country = ?, location = ?, industry = ?, image = ?, tag = ? WHERE x3.id = ? RETURNING id, slug, name, url, country, location, industry, image, tag
+[info]    |Quill Query (compiled in 154ms): UPDATE companies AS x3 SET slug = ?, name = ?, url = ?, country = ?, location = ?, industry = ?, image = ?, tag = ? WHERE x3.id = ? RETURNING id, slug, name, url, country, location, industry, image, tag
 [info] 36 |        query[Company]
 [info] 37 |          .filter(_.id == lift(id))
 [info] 38 |          .updateValue(lift(op(current)))
@@ -18,7 +18,7 @@
 [info] -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:44:8 
 [info] 44 |    run {
 [info]    |    ^
-[info]    |Quill Query (compiled in 28ms): DELETE FROM companies AS x4 WHERE x4.id = ? RETURNING id, slug, name, url, country, location, industry, image, tag
+[info]    |Quill Query (compiled in 71ms): DELETE FROM companies AS x4 WHERE x4.id = ? RETURNING id, slug, name, url, country, location, industry, image, tag
 [info] 45 |      query[Company]
 [info] 46 |        .filter(_.id == lift(id))
 [info] 47 |        .delete
@@ -27,20 +27,20 @@
 [info] -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:51:8 
 [info] 51 |    run {
 [info]    |    ^
-[info]    |Quill Query (compiled in 116ms): SELECT x5.id, x5.slug, x5.name, x5.url, x5.country, x5.location, x5.industry, x5.image, x5.tag FROM companies x5 WHERE x5.id = ?
+[info]    |Quill Query (compiled in 303ms): SELECT x5.id, x5.slug, x5.name, x5.url, x5.country, x5.location, x5.industry, x5.image, x5.tag FROM companies x5 WHERE x5.id = ?
 [info] 52 |      query[Company]
 [info] 53 |        .filter(_.id == lift(id))
 [info] 54 |    }.map(_.headOption)
 [info] -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:57:8 
 [info] 57 |    run {
 [info]    |    ^
-[info]    |Quill Query (compiled in 17ms): SELECT x7.id, x7.slug, x7.name, x7.url, x7.country, x7.location, x7.industry, x7.image, x7.tag FROM companies x7 WHERE x7.slug = ?
+[info]    |Quill Query (compiled in 29ms): SELECT x7.id, x7.slug, x7.name, x7.url, x7.country, x7.location, x7.industry, x7.image, x7.tag FROM companies x7 WHERE x7.slug = ?
 [info] 58 |      query[Company]
 [info] 59 |        .filter(_.slug == lift(slug))
 [info] 60 |    }.map(_.headOption)
 [info] -- Info: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/main/scala/com/rockthejvm/reviewboard/repositories/CompanyRepository.scala:62:8 
 [info] 62 |    run {
 [info]    |    ^
-[info]    |Quill Query (compiled in 6ms): SELECT x.id, x.slug, x.name, x.url, x.country, x.location, x.industry, x.image, x.tag FROM companies x
+[info]    |Quill Query (compiled in 7ms): SELECT x.id, x.slug, x.name, x.url, x.country, x.location, x.industry, x.image, x.tag FROM companies x
 [info] 63 |      query[Company]
 [info] 64 |    }

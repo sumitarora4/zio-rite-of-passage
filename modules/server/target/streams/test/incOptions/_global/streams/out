@@ -1,2 +1,18 @@
 [debug] Created transactional ClassFileManager with tempDir = /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes.bak
+[debug] About to delete class files:
+[debug] 	CompnayRepositorySpec$.class
+[debug] 	CompnayRepositorySpec.class
+[debug] 	CompnayRepositorySpec$.tasty
+[debug] 	CompnayRepositorySpec.tasty
+[debug] We backup class files:
+[debug] 	CompnayRepositorySpec$.class
+[debug] 	CompnayRepositorySpec.class
+[debug] 	CompnayRepositorySpec$.tasty
+[debug] 	CompnayRepositorySpec.tasty
+[debug] Rolling back changes to class files.
+[debug] Removing generated classes:
+[debug] Restoring class files: 
+[debug] 	CompnayRepositorySpec.class
+[debug] 	CompnayRepositorySpec.tasty
+[debug] 	CompnayRepositorySpec$.class
 [debug] Removing the temporary directory used for backing up class files: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes.bak
