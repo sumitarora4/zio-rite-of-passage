@@ -1,14 +1,58 @@
 [debug] Created transactional ClassFileManager with tempDir = /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/target/scala-3.3.1/test-classes.bak
 [debug] About to delete class files:
-[debug] 	CompnayRepositorySpec$.class
+[debug] 	CompanyServiceSpec$$anon$5.class
 [debug] 	CompnayRepositorySpec.class
-[debug] 	CompnayRepositorySpec$.tasty
+[debug] 	CompanyServiceSpec$$anon$4.class
+[debug] 	CompanyControllerSpec$$anon$2.class
+[debug] 	CompanyControllerSpec$.class
+[debug] 	CompanyServiceSpec.class
+[debug] 	CompanyServiceSpec$$anon$3.class
+[debug] 	CompanyServiceSpec$$anon$1.class
+[debug] 	CompanyServiceSpec$$anon$2.class
+[debug] 	CompanyServiceSpec$.class
+[debug] 	CompnayRepositorySpec$.class
+[debug] 	CompanyControllerSpec$$anon$1.class
+[debug] 	CompanyControllerSpec.class
+[debug] 	CompanyServiceSpec$$anon$5.tasty
 [debug] 	CompnayRepositorySpec.tasty
+[debug] 	CompanyServiceSpec$$anon$4.tasty
+[debug] 	CompanyControllerSpec$$anon$2.tasty
+[debug] 	CompanyControllerSpec$.tasty
+[debug] 	CompanyServiceSpec.tasty
+[debug] 	CompanyServiceSpec$$anon$3.tasty
+[debug] 	CompanyServiceSpec$$anon$1.tasty
+[debug] 	CompanyServiceSpec$$anon$2.tasty
+[debug] 	CompanyServiceSpec$.tasty
+[debug] 	CompnayRepositorySpec$.tasty
+[debug] 	CompanyControllerSpec$$anon$1.tasty
+[debug] 	CompanyControllerSpec.tasty
 [debug] We backup class files:
-[debug] 	CompnayRepositorySpec$.class
+[debug] 	CompanyServiceSpec$$anon$5.class
 [debug] 	CompnayRepositorySpec.class
-[debug] 	CompnayRepositorySpec$.tasty
+[debug] 	CompanyServiceSpec$$anon$4.class
+[debug] 	CompanyControllerSpec$$anon$2.class
+[debug] 	CompanyControllerSpec$.class
+[debug] 	CompanyServiceSpec.class
+[debug] 	CompanyServiceSpec$$anon$3.class
+[debug] 	CompanyServiceSpec$$anon$1.class
+[debug] 	CompanyServiceSpec$$anon$2.class
+[debug] 	CompanyServiceSpec$.class
+[debug] 	CompnayRepositorySpec$.class
+[debug] 	CompanyControllerSpec$$anon$1.class
+[debug] 	CompanyControllerSpec.class
+[debug] 	CompanyServiceSpec$$anon$5.tasty
 [debug] 	CompnayRepositorySpec.tasty
+[debug] 	CompanyServiceSpec$$anon$4.tasty
+[debug] 	CompanyControllerSpec$$anon$2.tasty
+[debug] 	CompanyControllerSpec$.tasty
+[debug] 	CompanyServiceSpec.tasty
+[debug] 	CompanyServiceSpec$$anon$3.tasty
+[debug] 	CompanyServiceSpec$$anon$1.tasty
+[debug] 	CompanyServiceSpec$$anon$2.tasty
+[debug] 	CompanyServiceSpec$.tasty
+[debug] 	CompnayRepositorySpec$.tasty
+[debug] 	CompanyControllerSpec$$anon$1.tasty
+[debug] 	CompanyControllerSpec.tasty
 [debug] Rolling back changes to class files.
 [debug] Removing generated classes:
 [debug] Restoring class files: 

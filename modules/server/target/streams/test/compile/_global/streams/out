@@ -1,31 +1,13 @@
-[error] -- Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/repositories/CompnayRepositorySpec.scala:11:8 
-[error] 11 |        suite("CompanyRepsitorySpec")(
-[error]    |        ^
+[error] -- [E007] Type Mismatch Error: /Users/sumitarora/Desktop/zio-rite-of-passage/modules/server/src/test/scala/com/rockthejvm/reviewboard/repositories/CompnayRepositorySpec.scala:62:9 
+[error] 62 |        }
+[error]    |         ^
+[error]    |    Found:    Unit
+[error]    |    Required: zio.test.Spec[zio.test.TestEnvironment & zio.Scope, Any]
+[error]    |
+[error]    |    The following import might make progress towards fixing the problem:
+[error]    |
+[error]    |      import io.getquill.autoQuote
 [error]    |
 [error]    |
-[error]    |  ──── ZIO SPEC ERROR ──────────────────────────────────────────────────
-[error]    |
-[error]    |   Your suite requires a service that is not in the environment.
-[error]    |   Please provide a layer for the following type:
-[error]    |
-[error]    |     1. com.rockthejvm.reviewboard.repositories.CompanyRepository
-[error]    |
-[error]    |   Call your suite's provide method with the layers you need.
-[error]    |   You can read more about layers and providing services here:
-[error]    |   
-[error]    |     https://zio.dev/reference/contextual/
-[error]    |
-[error]    |  ──────────────────────────────────────────────────────────────────────
-[error]    |
-[error] 12 |            test("create a compnay"){
-[error] 13 |                val program = for {
-[error] 14 |                    repo <- ZIO.service[CompanyRepository]
-[error] 15 |                    company <- repo.create(Company(1L, "rock-the-jvm","Rock the JVM", "rockthejvm.com"))
-[error] 16 |                } yield company
-[error] 17 |                program.assert{
-[error] 18 |                    case Company(_,"rock-the-jvm","Rock the JVM", "rockthejvm.com",_, _, _, _, _) => true
-[error] 19 |                    case _ => false
-[error] 20 |                }
-[error] 21 |            }
-[error] 22 |        )
+[error]    | longer explanation available when compiling with `-explain`
 [error] one error found
