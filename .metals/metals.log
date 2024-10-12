@@ -14312,3 +14312,16 @@ org.eclipse.lsp4j.jsonrpc.ResponseErrorException: (server / Compile / compileInc
 Sep 07, 2024 7:48:12 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFO: Unsupported notification method: $/setTrace
 2024.09.07 19:48:12 INFO  Processing buildTarget/compile
+2024.09.07 19:49:12 INFO  Processing buildTarget/compile
+2024.09.07 19:50:12 INFO  Processing buildTarget/compile
+2024.09.07 19:51:12 INFO  Processing buildTarget/compile
+2024.09.07 19:52:12 INFO  Processing buildTarget/compile
+2024.09.07 19:53:12 INFO  Processing buildTarget/compile
+2024.09.07 19:54:12 INFO  Processing buildTarget/compile
+2024.09.07 19:55:12 INFO  Processing buildTarget/compile
+2024.09.07 19:56:12 INFO  Processing buildTarget/compile
+2024.09.07 19:57:12 INFO  Processing buildTarget/compile
+2024.09.07 19:58:28 INFO  Shutting down server
+2024.09.07 19:58:28 INFO  shutting down Metals
+2024.09.07 19:58:28 INFO  Shut down connection with build server.
+2024.09.07 19:58:28 INFO  Exiting server
